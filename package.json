@@ -1,0 +1,32 @@
+{
+  "name": "adventure-machine",
+  "version": "0.1.0",
+  "description": "Music app",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kmiloarguello/adventuremachine.git"
+  },
+  "keywords": [
+    "CA",
+    "adventure-machine",
+    "madeon",
+    "javascript"
+  ],
+  "author": "Camilo Arguello",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kmiloarguello/adventuremachine/issues"
+  },
+  "homepage": "https://github.com/kmiloarguello/adventuremachine#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "materialize-css": "^0.97.7",
+    "pug": "^2.0.0-beta6"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2"
+  }
+}

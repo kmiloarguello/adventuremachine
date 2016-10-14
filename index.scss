@@ -1,0 +1,57 @@
+@import "node_modules/materialize-css/sass/materialize.scss";
+
+body{
+    font-family: 'Comfortaa', cursive;
+    text-align: center;
+    background-image: url(bg.png);
+    background-position: center;
+}
+#contenedor{
+    width: 400px;
+    margin-top: 10%;
+    display: block;
+    text-align: center;
+    display: inline-block;
+}
+
+ul{
+    width:90%;
+    height: 100%;
+    list-style-type: none;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    display: block;
+    text-align: center;
+    display: inline-block;
+}
+
+li{
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin: 5px;
+    background-color: rgba(175, 46, 80, 0.47);
+    border:1px solid rgba(0,0,0,0.17);
+}
+li:hover{
+    background-color: rgba(212,33,79,0.64);
+    cursor: pointer;
+}
+li.toggled {
+    background-color: #D4214F;
+}
+li.toggled:hover{
+    background-color: rgba(212,33,79,0.8);
+}
+p,h1{
+    color:rgba(236, 240, 241,1.0);  
+}
+#footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    margin-top: 80px;
+}
