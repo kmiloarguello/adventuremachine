@@ -6431,22 +6431,22 @@ ul #btnHousing1:hover, ul #btnHousing5:hover, ul #btnHousing9:hover {
 ul #btnHousing1.toggled, ul #btnHousing5.toggled, ul #btnHousing9.toggled {
   background-color: #0AFDCC; }
 
-ul #btnHousing2, ul #btnHousing4, ul #btnHousing6, ul #btnHousing8 {
+ul #btnHousing2, ul #btnHousing3, ul #btnHousing6 {
   background-color: rgba(175, 46, 80, 0.47); }
 
-ul #btnHousing2:hover, ul #btnHousing4:hover, ul #btnHousing6:hover, ul #btnHousing8:hover {
+ul #btnHousing2:hover, ul #btnHousing3:hover, ul #btnHousing6:hover {
   background-color: rgba(212, 33, 79, 0.64); }
 
-ul #btnHousing2.toggled, ul #btnHousing4.toggled, ul #btnHousing6.toggled, ul #btnHousing8.toggled {
+ul #btnHousing2.toggled, ul #btnHousing3.toggled, ul #btnHousing6.toggled {
   background-color: #D4214F; }
 
-ul #btnHousing3, ul #btnHousing7 {
+ul #btnHousing4, ul #btnHousing7, ul #btnHousing8 {
   background-color: rgba(56, 75, 107, 0.32); }
 
-ul #btnHousing3:hover, ul #btnHousing7:hover {
+ul #btnHousing4:hover, ul #btnHousing7:hover, ul #btnHousing8:hover {
   background-color: rgba(44, 100, 196, 0.64); }
 
-ul #btnHousing3.toggled, ul #btnHousing7.toggled {
+ul #btnHousing4.toggled, ul #btnHousing7.toggled, ul #btnHousing8.toggled {
   background-color: #2C64C4; }
 
 li.toggled:hover {
@@ -6477,6 +6477,21 @@ footer #about:hover {
   background-color: #F8E9DB;
   color: #141414; }
 
+footer #controls {
+  width: 50px;
+  height: auto;
+  padding: 20px 5px;
+  background-color: rgba(20, 20, 20, 0.3);
+  display: block;
+  text-align: center;
+  display: inline-block;
+  color: #ecf0f1;
+  cursor: pointer; }
+
+footer #controls:hover {
+  background-color: #F8E9DB;
+  color: #141414; }
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) {
   #contenedor {
@@ -6487,7 +6502,15 @@ footer #about:hover {
     height: 50px;
     margin: 5px; }
   h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  footer #about {
+    width: 100px;
+    height: auto;
+    padding: 20px 2px; }
+  footer #controls {
+    width: 30px;
+    height: auto;
+    padding: 20px 5px; } }
 
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width: 320px) {
@@ -6499,4 +6522,12 @@ footer #about:hover {
     height: 50px;
     margin: 5px; }
   h1 {
-    font-size: 30px; } }
+    font-size: 30px; }
+  footer #about {
+    width: 100px;
+    height: auto;
+    padding: 20px 2px; }
+  footer #controls {
+    width: 30px;
+    height: auto;
+    padding: 20px 5px; } }

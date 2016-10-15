@@ -62,23 +62,23 @@ ul{
         background-color: $verde_activo;
     }    
     
-    #btnHousing2,#btnHousing4,#btnHousing6,#btnHousing8{
+    #btnHousing2,#btnHousing3,#btnHousing6{
         background-color: $rojo;
     }
-    #btnHousing2:hover,#btnHousing4:hover,#btnHousing6:hover,#btnHousing8:hover{
+    #btnHousing2:hover,#btnHousing3:hover,#btnHousing6:hover{
         background-color: $rojo_hover;
     }
-    #btnHousing2.toggled,#btnHousing4.toggled,#btnHousing6.toggled,#btnHousing8.toggled{
+    #btnHousing2.toggled,#btnHousing3.toggled,#btnHousing6.toggled{
         background-color: $rojo_activo;
     }
     
-    #btnHousing3,#btnHousing7 {
+    #btnHousing4,#btnHousing7,#btnHousing8 {
         background-color: $azul;
     }
-    #btnHousing3:hover,#btnHousing7:hover{
+    #btnHousing4:hover,#btnHousing7:hover,#btnHousing8:hover{
         background-color: $azul_hover;
     }
-    #btnHousing3.toggled,#btnHousing7.toggled{
+    #btnHousing4.toggled,#btnHousing7.toggled,#btnHousing8.toggled{
         background-color: $azul_activo;
     }
     
@@ -112,6 +112,22 @@ footer #about:hover{
     color: #141414;
 }
 
+footer #controls{
+    width: 50px;
+    height: auto;
+    padding: 20px 5px;
+    background-color: rgba(20,20,20,0.3);
+    display: block;
+    text-align: center;
+    display: inline-block;
+    color: $secondary-color;
+    cursor:pointer;
+}
+footer #controls:hover{
+    background-color: #F8E9DB;
+    color: #141414;
+}
+
 
 
 /* Smartphones (portrait and landscape) ----------- */
@@ -127,6 +143,18 @@ footer #about:hover{
     }
     h1{
         font-size: 30px;
+    }
+    footer{
+        #about{
+            width: 100px;
+            height: auto;
+            padding: 20px 2px;
+        }
+        #controls{
+            width: 30px;
+            height: auto;
+            padding: 20px 5px;
+        }
     }
 }
 
@@ -144,4 +172,16 @@ footer #about:hover{
     h1{
         font-size: 30px;
     }
+    footer{
+        #about{
+            width: 100px;
+            height: auto;
+            padding: 20px 2px;
+        }
+        #controls{
+            width: 30px;
+            height: auto;
+            padding: 20px 5px;
+        }
+    }    
 }
