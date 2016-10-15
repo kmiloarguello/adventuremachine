@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/kmiloarguello/adventuremachine#readme",
   "dependencies": {
+    "empty-element": "^1.0.0",
     "express": "^4.14.0",
     "materialize-css": "^0.97.7",
     "page": "^1.7.1",

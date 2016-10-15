@@ -183,6 +183,21 @@ process.chdir = function (dir) {
 process.umask = function() { return 0; };
 
 },{}],3:[function(require,module,exports){
+/* global HTMLElement */
+
+'use strict'
+
+module.exports = function emptyElement (element) {
+  if (!(element instanceof HTMLElement)) {
+    throw new TypeError('Expected an element')
+  }
+
+  var node
+  while ((node = element.lastChild)) element.removeChild(node)
+  return element
+}
+
+},{}],4:[function(require,module,exports){
 (function (process){
   /* globals require, module */
 
@@ -808,7 +823,7 @@ process.umask = function() { return 0; };
   page.sameOrigin = sameOrigin;
 
 }).call(this,require('_process'))
-},{"_process":2,"path-to-regexp":4}],4:[function(require,module,exports){
+},{"_process":2,"path-to-regexp":5}],5:[function(require,module,exports){
 var isarray = require('isarray')
 
 /**
@@ -1200,12 +1215,12 @@ function pathToRegexp (path, keys, options) {
   return stringToRegexp(path, keys, options)
 }
 
-},{"isarray":5}],5:[function(require,module,exports){
+},{"isarray":6}],6:[function(require,module,exports){
 module.exports = Array.isArray || function (arr) {
   return Object.prototype.toString.call(arr) == '[object Array]';
 };
 
-},{}],6:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 var bel = require('bel') // turns template tag into DOM elements
 var morphdom = require('morphdom') // efficiently diffs + morphs two DOM elements
 var defaultEvents = require('./update-events.js') // default events to be copied when dom elements update
@@ -1241,7 +1256,7 @@ module.exports.update = function (fromNode, toNode, opts) {
   }
 }
 
-},{"./update-events.js":14,"bel":7,"morphdom":13}],7:[function(require,module,exports){
+},{"./update-events.js":15,"bel":8,"morphdom":14}],8:[function(require,module,exports){
 var document = require('global/document')
 var hyperx = require('hyperx')
 var onload = require('on-load')
@@ -1389,7 +1404,7 @@ function belCreateElement (tag, props, children) {
 module.exports = hyperx(belCreateElement)
 module.exports.createElement = belCreateElement
 
-},{"global/document":8,"hyperx":10,"on-load":12}],8:[function(require,module,exports){
+},{"global/document":9,"hyperx":11,"on-load":13}],9:[function(require,module,exports){
 (function (global){
 var topLevel = typeof global !== 'undefined' ? global :
     typeof window !== 'undefined' ? window : {}
@@ -1408,7 +1423,7 @@ if (typeof document !== 'undefined') {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"min-document":1}],9:[function(require,module,exports){
+},{"min-document":1}],10:[function(require,module,exports){
 (function (global){
 if (typeof window !== "undefined") {
     module.exports = window;
@@ -1421,7 +1436,7 @@ if (typeof window !== "undefined") {
 }
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{}],10:[function(require,module,exports){
+},{}],11:[function(require,module,exports){
 var attrToProp = require('hyperscript-attribute-to-property')
 
 var VAR = 0, TEXT = 1, OPEN = 2, CLOSE = 3, ATTR = 4
@@ -1686,7 +1701,7 @@ var closeRE = RegExp('^(' + [
 ].join('|') + ')(?:[\.#][a-zA-Z0-9\u007F-\uFFFF_:-]+)*$')
 function selfClosing (tag) { return closeRE.test(tag) }
 
-},{"hyperscript-attribute-to-property":11}],11:[function(require,module,exports){
+},{"hyperscript-attribute-to-property":12}],12:[function(require,module,exports){
 module.exports = attributeToProperty
 
 var transform = {
@@ -1707,7 +1722,7 @@ function attributeToProperty (h) {
   }
 }
 
-},{}],12:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 /* global MutationObserver */
 var document = require('global/document')
 var window = require('global/window')
@@ -1796,7 +1811,7 @@ function eachMutation (nodes, fn) {
   }
 }
 
-},{"global/document":8,"global/window":9}],13:[function(require,module,exports){
+},{"global/document":9,"global/window":10}],14:[function(require,module,exports){
 'use strict';
 // Create a range object for efficently rendering strings to elements.
 var range;
@@ -2449,7 +2464,7 @@ function morphdom(fromNode, toNode, options) {
 
 module.exports = morphdom;
 
-},{}],14:[function(require,module,exports){
+},{}],15:[function(require,module,exports){
 module.exports = [
   // attribute events (can be set with attributes)
   'onclick',
@@ -2487,41 +2502,56 @@ module.exports = [
   'onfocusout'
 ]
 
-},{}],15:[function(require,module,exports){
+},{}],16:[function(require,module,exports){
 var page = require("page");
-var yo = require("yo-yo");
+
+var main = document.getElementById('main-container');
+
+page('/about-me', function (ctx, next) {
+    main.innerHTML = "HOLAAA";
+});
+
+},{"page":4}],17:[function(require,module,exports){
+var page = require("page");
+var empty = require("empty-element");
+var template = require("./template");
 
 var main = document.getElementById('main-container');
 
 page('/', function (ctx, next) {
+    main.appendChild(template);
+});
 
-    var el = yo`<div class="container">
-                    <div class="row">
-                        <div class="col s12">
-                            <div id="contenedor">
-                               <ul>
-                                   <li id="btnHousing1"  onclick="btnColor('btnHousing1'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing2"  onclick="btnColor('btnHousing2'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing3"  onclick="btnColor('btnHousing3'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing4"  onclick="btnColor('btnHousing4'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing5"  onclick="btnColor('btnHousing5'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing6"  onclick="btnColor('btnHousing6'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing7"  onclick="btnColor('btnHousing7'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing8"  onclick="btnColor('btnHousing8'); sonido(bufferLoader.bufferList);"></li>
-                                   <li id="btnHousing9"  onclick="btnColor('btnHousing9'); sonido(bufferLoader.bufferList);"></li>
-                                </ul> 
+},{"./template":18,"empty-element":3,"page":4}],18:[function(require,module,exports){
+var yo = require("yo-yo");
+
+module.exports = yo`<div class="container">
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="/about-me"><h1>Adventure Machine</h1></a>
+                                <div id="contenedor">
+                                   <ul>
+                                       <li id="btnHousing1"  onclick="btnColor('btnHousing1'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing2"  onclick="btnColor('btnHousing2'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing3"  onclick="btnColor('btnHousing3'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing4"  onclick="btnColor('btnHousing4'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing5"  onclick="btnColor('btnHousing5'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing6"  onclick="btnColor('btnHousing6'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing7"  onclick="btnColor('btnHousing7'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing8"  onclick="btnColor('btnHousing8'); sonido(bufferLoader.bufferList);"></li>
+                                       <li id="btnHousing9"  onclick="btnColor('btnHousing9'); sonido(bufferLoader.bufferList);"></li>
+                                    </ul> 
+                                </div>
                             </div>
                         </div>
-                    </div>
-                </div>`;
+                    </div>`;
 
-    main.appendChild(el);
-});
+},{"yo-yo":7}],19:[function(require,module,exports){
+var page = require("page");
 
-page('/about-me', function (ctx, next) {
-    main.innerHTML = '<h1>ABOUT ME</h1>';
-});
+require('./homepage');
+require('./about-me');
 
 page();
 
-},{"page":3,"yo-yo":6}]},{},[15]);
+},{"./about-me":16,"./homepage":17,"page":4}]},{},[19]);

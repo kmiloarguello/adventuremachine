@@ -1,3 +1,5 @@
+
+$secondary-color: rgba(236, 240, 241,1.0); 
 @import "node_modules/materialize-css/sass/materialize.scss";
 
 body{
@@ -46,7 +48,7 @@ li.toggled:hover{
     background-color: rgba(212,33,79,0.8);
 }
 p,h1{
-    color:rgba(236, 240, 241,1.0);  
+    color:$secondary-color;  
 }
 footer{
     position: absolute;
@@ -55,6 +57,22 @@ footer{
     z-index: 2;
     margin-top: 80px;
 }
+footer #about{
+    width: 100px;
+    height: auto;
+    padding: 20px 5px;
+    background-color: rgba(20,20,20,0.3);
+    display: block;
+    text-align: center;
+    display: inline-block;
+    color: $secondary-color;
+    cursor:pointer;
+}
+footer #about:hover{
+    background-color: #F8E9DB;
+    color: #141414;
+}
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     #contenedor{
