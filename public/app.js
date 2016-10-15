@@ -2643,11 +2643,6 @@ var beatBox = yo`<div id="contenedor">
                            <li id="btnHousing8"  onclick="btnColor('btnHousing8'); sonido(bufferLoader.bufferList);"></li>
                            <li id="btnHousing9"  onclick="btnColor('btnHousing9'); sonido(bufferLoader.bufferList);"></li>
                         </ul>
-                        <br>
-                        <br>
-                        <br>
-                        <a href="/about-me">About Me</a>
-                        <a href="/adventure">Adventure</a>
                     </div>`;
 
 module.exports = landing(beatBox);

@@ -1,5 +1,18 @@
 
 $secondary-color: rgba(236, 240, 241,1.0); 
+
+$rojo: rgba(175, 46, 80, 0.47);
+$rojo_hover: rgba(212,33,79,0.64);
+$rojo_activo: #D4214F;
+
+$verde: rgba(33, 208, 168, 0.37);
+$verde_hover: rgba(10, 253, 204, 0.64);
+$verde_activo: #0AFDCC;
+
+$azul: rgba(56, 75, 107, 0.32);
+$azul_hover: rgba(44, 100, 196, 0.64);
+$azul_activo: #2C64C4;
+
 @import "node_modules/materialize-css/sass/materialize.scss";
 
 body{
@@ -34,15 +47,41 @@ li{
     height: 100px;
     float: left;
     margin: 5px;
-    background-color: rgba(175, 46, 80, 0.47);
+    cursor: pointer;
     border: 1px solid rgba(0,0,0,0.17);
 }
-li:hover{
-    background-color: rgba(212,33,79,0.64);
-    cursor: pointer;
-}
-li.toggled {
-    background-color: #D4214F;
+
+ul{
+    #btnHousing1,#btnHousing5,#btnHousing9 {
+        background-color: $verde;
+    }
+    #btnHousing1:hover,#btnHousing5:hover,#btnHousing9:hover{
+        background-color: $verde_hover;
+    } 
+    #btnHousing1.toggled,#btnHousing5.toggled,#btnHousing9.toggled{
+        background-color: $verde_activo;
+    }    
+    
+    #btnHousing2,#btnHousing4,#btnHousing6,#btnHousing8{
+        background-color: $rojo;
+    }
+    #btnHousing2:hover,#btnHousing4:hover,#btnHousing6:hover,#btnHousing8:hover{
+        background-color: $rojo_hover;
+    }
+    #btnHousing2.toggled,#btnHousing4.toggled,#btnHousing6.toggled,#btnHousing8.toggled{
+        background-color: $rojo_activo;
+    }
+    
+    #btnHousing3,#btnHousing7 {
+        background-color: $azul;
+    }
+    #btnHousing3:hover,#btnHousing7:hover{
+        background-color: $azul_hover;
+    }
+    #btnHousing3.toggled,#btnHousing7.toggled{
+        background-color: $azul_activo;
+    }
+    
 }
 li.toggled:hover{
     background-color: rgba(212,33,79,0.8);
@@ -73,6 +112,8 @@ footer #about:hover{
     color: #141414;
 }
 
+
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     #contenedor{
@@ -83,6 +124,9 @@ footer #about:hover{
     width: 50px;
     height: 50px;
     margin: 5px;
+    }
+    h1{
+        font-size: 30px;
     }
 }
 
@@ -96,5 +140,8 @@ footer #about:hover{
     width: 50px;
     height: 50px;
     margin: 5px;
+    }
+    h1{
+        font-size: 30px;
     }
 }
