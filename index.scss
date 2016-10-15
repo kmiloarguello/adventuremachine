@@ -3,7 +3,7 @@
 body{
     font-family: 'Comfortaa', cursive;
     text-align: center;
-    background-image: url(bg.png);
+    background-image: url(background.jpg);
     background-position: center;
     // background: red;
 }
@@ -16,8 +16,7 @@ body{
 }
 
 ul{
-    width:90%;
-    height: 100%;
+    width: 90%;
     list-style-type: none;
     -webkit-transform: rotate(45deg);
     -moz-transform: rotate(45deg);
@@ -34,7 +33,7 @@ li{
     float: left;
     margin: 5px;
     background-color: rgba(175, 46, 80, 0.47);
-    border:1px solid rgba(0,0,0,0.17);
+    border: 1px solid rgba(0,0,0,0.17);
 }
 li:hover{
     background-color: rgba(212,33,79,0.64);
@@ -49,10 +48,35 @@ li.toggled:hover{
 p,h1{
     color:rgba(236, 240, 241,1.0);  
 }
-#footer{
+footer{
     position: absolute;
     left: 0;
     right: 0;
     z-index: 2;
     margin-top: 80px;
+}
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+    #contenedor{
+    width: 200px;
+    margin-top: 15%;
+    }
+    li{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    }
+}
+
+/* Smartphones (portrait) ----------- */
+@media only screen and (max-width : 320px) {
+    #contenedor{
+    width: 200px;
+    margin-top: 20%;
+    }
+    li{
+    width: 50px;
+    height: 50px;
+    margin: 5px;
+    }
 }
