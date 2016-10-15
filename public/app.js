@@ -2504,14 +2504,90 @@ module.exports = [
 
 },{}],16:[function(require,module,exports){
 var page = require("page");
+var empty = require("empty-element");
+var template = require("./template");
 
 var main = document.getElementById('main-container');
 
 page('/about-me', function (ctx, next) {
-    main.innerHTML = "HOLAAA";
+    empty(main).appendChild(template);
 });
 
-},{"page":4}],17:[function(require,module,exports){
+},{"./template":17,"empty-element":3,"page":4}],17:[function(require,module,exports){
+var yo = require("yo-yo");
+var landing = require("../landing");
+
+var aboutme = yo`<div><p>ABOUT ME</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                    dolor in hendrerit in vulputate velit esse molestie consequat,
+                    vel illum dolore eu feugiat nulla facilisis at vero eros et
+                    accumsan et iusto odio dignissim qui blandit praesent luptatum
+                    zzril delenit augue duis dolore te feugait nulla facilisi.
+                    Nam liber tempor cum soluta nobis eleifend option congue
+                    nihil imperdiet doming id quod mazim placerat facer possim
+                    assum. Typi non habent claritatem insitam; est usus legentis
+                    in iis qui facit eorum claritatem. Investigationes
+                    demonstraverunt lectores legere me lius quod ii legunt saepius.
+                    Claritas est etiam processus dynamicus, qui sequitur mutationem
+                    consuetudium lectorum. Mirum est notare quam littera gothica,
+                    quam nunc putamus parum claram, anteposuerit litterarum formas
+                    humanitatis per seacula quarta decima et quinta decima. Eodem
+                    modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                    in futurum.</p>
+                    <a href="/">Home</a>
+                    <a href="/adventure">Adventure</a>
+                    </div>`;
+
+module.exports = landing(aboutme);
+
+},{"../landing":23,"yo-yo":7}],18:[function(require,module,exports){
+var page = require("page");
+var empty = require("empty-element");
+var template = require("./template");
+
+var main = document.getElementById('main-container');
+
+page('/adventure', function (ctx, next) {
+    empty(main).appendChild(template);
+});
+
+},{"./template":19,"empty-element":3,"page":4}],19:[function(require,module,exports){
+var yo = require("yo-yo");
+var landing = require("../landing");
+
+var adventure = yo`<div>
+                    <p>ADVENTURE</p>
+                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit,
+                    sed diam nonummy nibh euismod tincidunt ut laoreet dolore
+                    magna aliquam erat volutpat. Ut wisi enim ad minim veniam,
+                    quis nostrud exerci tation ullamcorper suscipit lobortis nisl
+                    ut aliquip ex ea commodo consequat. Duis autem vel eum iriure
+                    dolor in hendrerit in vulputate velit esse molestie consequat,
+                    vel illum dolore eu feugiat nulla facilisis at vero eros et
+                    accumsan et iusto odio dignissim qui blandit praesent luptatum
+                    zzril delenit augue duis dolore te feugait nulla facilisi.
+                    Nam liber tempor cum soluta nobis eleifend option congue
+                    nihil imperdiet doming id quod mazim placerat facer possim
+                    assum. Typi non habent claritatem insitam; est usus legentis
+                    in iis qui facit eorum claritatem. Investigationes
+                    demonstraverunt lectores legere me lius quod ii legunt saepius.
+                    Claritas est etiam processus dynamicus, qui sequitur mutationem
+                    consuetudium lectorum. Mirum est notare quam littera gothica,
+                    quam nunc putamus parum claram, anteposuerit litterarum formas
+                    humanitatis per seacula quarta decima et quinta decima. Eodem
+                    modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
+                    in futurum.</p>
+                    <a href="/about-me">About Me</a>
+                    <a href="/">Home</a>
+                    </div>`;
+
+module.exports = landing(adventure);
+
+},{"../landing":23,"yo-yo":7}],20:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -2519,39 +2595,57 @@ var template = require("./template");
 var main = document.getElementById('main-container');
 
 page('/', function (ctx, next) {
-    main.appendChild(template);
+    empty(main).appendChild(template);
 });
 
-},{"./template":18,"empty-element":3,"page":4}],18:[function(require,module,exports){
+},{"./template":21,"empty-element":3,"page":4}],21:[function(require,module,exports){
 var yo = require("yo-yo");
+var landing = require("../landing");
 
-module.exports = yo`<div class="container">
-                        <div class="row">
-                            <div class="col s12">
-                                <a href="/about-me"><h1>Adventure Machine</h1></a>
-                                <div id="contenedor">
-                                   <ul>
-                                       <li id="btnHousing1"  onclick="btnColor('btnHousing1'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing2"  onclick="btnColor('btnHousing2'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing3"  onclick="btnColor('btnHousing3'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing4"  onclick="btnColor('btnHousing4'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing5"  onclick="btnColor('btnHousing5'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing6"  onclick="btnColor('btnHousing6'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing7"  onclick="btnColor('btnHousing7'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing8"  onclick="btnColor('btnHousing8'); sonido(bufferLoader.bufferList);"></li>
-                                       <li id="btnHousing9"  onclick="btnColor('btnHousing9'); sonido(bufferLoader.bufferList);"></li>
-                                    </ul> 
-                                </div>
-                            </div>
-                        </div>
+var beatBox = yo`<div id="contenedor">
+                       <ul>
+                           <li id="btnHousing1"  onclick="btnColor('btnHousing1'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing2"  onclick="btnColor('btnHousing2'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing3"  onclick="btnColor('btnHousing3'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing4"  onclick="btnColor('btnHousing4'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing5"  onclick="btnColor('btnHousing5'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing6"  onclick="btnColor('btnHousing6'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing7"  onclick="btnColor('btnHousing7'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing8"  onclick="btnColor('btnHousing8'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing9"  onclick="btnColor('btnHousing9'); sonido(bufferLoader.bufferList);"></li>
+                        </ul>
+                        <br>
+                        <br>
+                        <br>
+                        <a href="/about-me">About Me</a>
+                        <a href="/adventure">Adventure</a>
                     </div>`;
 
-},{"yo-yo":7}],19:[function(require,module,exports){
+module.exports = landing(beatBox);
+
+},{"../landing":23,"yo-yo":7}],22:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
 require('./about-me');
+require('./adventure');
 
 page();
 
-},{"./about-me":16,"./homepage":17,"page":4}]},{},[19]);
+},{"./about-me":16,"./adventure":18,"./homepage":20,"page":4}],23:[function(require,module,exports){
+var yo = require("yo-yo");
+
+module.exports = function landing(box) {
+    return yo`<div class="container">
+                    <div class="row">
+                        <div class="col s12">
+                            
+                            <h1>Adventure Machine</h1>
+                            
+                            ${ box }
+                        </div>
+                    </div>
+                </div>`;
+};
+
+},{"yo-yo":7}]},{},[22]);

@@ -14,4 +14,8 @@ app.get('/about-me', function (req, res) {
   res.render('index')
 });
 
+app.get('/adventure', function (req, res) {
+  res.render('index')
+});
+
 app.listen(process.env.PORT, process.env.IP);

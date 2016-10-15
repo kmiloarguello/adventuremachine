@@ -4,6 +4,6 @@ var template = require("./template");
 
 var main = document.getElementById('main-container');
 
-page('/about-me', function(ctx, next) {
+page('/adventure', function(ctx, next) {
     empty(main).appendChild(template);
 });
