@@ -22,8 +22,6 @@ var aboutme = yo`<div><p>ABOUT ME</p>
                     humanitatis per seacula quarta decima et quinta decima. Eodem
                     modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
                     in futurum.</p>
-                    <a href="/">Home</a>
-                    <a href="/adventure">Adventure</a>
                     </div>`;
                     
 module.exports = landing(aboutme);

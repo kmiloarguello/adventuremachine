@@ -2563,13 +2563,11 @@ var aboutme = yo`<div><p>ABOUT ME</p>
                     humanitatis per seacula quarta decima et quinta decima. Eodem
                     modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
                     in futurum.</p>
-                    <a href="/">Home</a>
-                    <a href="/adventure">Adventure</a>
                     </div>`;
 
 module.exports = landing(aboutme);
 
-},{"../landing":24,"yo-yo":8}],19:[function(require,module,exports){
+},{"../landing":25,"yo-yo":8}],19:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -2608,13 +2606,26 @@ var adventure = yo`<div>
                     humanitatis per seacula quarta decima et quinta decima. Eodem
                     modo typi, qui nunc nobis videntur parum clari, fiant sollemnes
                     in futurum.</p>
-                    <a href="/about-me">About Me</a>
-                    <a href="/">Home</a>
                     </div>`;
 
 module.exports = landing(adventure);
 
-},{"../landing":24,"yo-yo":8}],21:[function(require,module,exports){
+},{"../landing":25,"yo-yo":8}],21:[function(require,module,exports){
+var yo = require("yo-yo");
+
+var el = yo`<footer>
+              <a href="/about-me"><div id="about"><small>ABOUT ME</small></div></a>
+              <div id="controls"><small><i aria-hidden="true" class="fa fa-upload"></i></small></div>
+              <div id="controls"><small><i aria-hidden="true" class="fa fa-play"></i></small></div>
+              <div id="controls"><small><i aria-hidden="true" class="fa fa-volume-up"></i></small></div>
+              <a href="/adventure"><div id="about"><small>WHAT IS IT?</small></div></a>
+              <p>Camilo Λrguello</p>
+              <p>2016</p>
+            </footer>`;
+
+document.body.appendChild(el);
+
+},{"yo-yo":8}],22:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -2627,7 +2638,7 @@ page('/', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"./template":22,"empty-element":3,"page":4,"title":7}],22:[function(require,module,exports){
+},{"./template":23,"empty-element":3,"page":4,"title":7}],23:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 
@@ -2647,16 +2658,17 @@ var beatBox = yo`<div id="contenedor">
 
 module.exports = landing(beatBox);
 
-},{"../landing":24,"yo-yo":8}],23:[function(require,module,exports){
+},{"../landing":25,"yo-yo":8}],24:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
 require('./about-me');
 require('./adventure');
+require('./footer');
 
 page();
 
-},{"./about-me":17,"./adventure":19,"./homepage":21,"page":4}],24:[function(require,module,exports){
+},{"./about-me":17,"./adventure":19,"./footer":21,"./homepage":22,"page":4}],25:[function(require,module,exports){
 var yo = require("yo-yo");
 
 module.exports = function landing(box) {
@@ -2664,7 +2676,7 @@ module.exports = function landing(box) {
                     <div class="row">
                         <div class="col s12">
                             
-                            <h1>Adventure Machine</h1>
+                            <a href="/"><h1>Adventure Machine</h1></a>
                             
                             ${ box }
                         </div>
@@ -2672,4 +2684,4 @@ module.exports = function landing(box) {
                 </div>`;
 };
 
-},{"yo-yo":8}]},{},[23]);
+},{"yo-yo":8}]},{},[24]);

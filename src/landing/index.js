@@ -5,7 +5,7 @@ module.exports = function landing(box){
                     <div class="row">
                         <div class="col s12">
                             
-                            <h1>Adventure Machine</h1>
+                            <a href="/"><h1>Adventure Machine</h1></a>
                             
                             ${ box }
                         </div>
