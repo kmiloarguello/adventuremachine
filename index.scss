@@ -30,7 +30,7 @@ body{
     display: inline-block;
 }
 
-ul{
+#contenedor ul{
     width: 90%;
     list-style-type: none;
     -webkit-transform: rotate(45deg);
@@ -42,7 +42,7 @@ ul{
     display: inline-block;
 }
 
-li{
+#contenedor li{
     width: 100px;
     height: 100px;
     float: left;
@@ -112,7 +112,7 @@ footer #about:hover{
     color: #141414;
 }
 
-footer #controls{
+footer #controls,footer #controls1{
     width: 50px;
     height: auto;
     padding: 20px 5px;
@@ -123,9 +123,55 @@ footer #controls{
     color: $secondary-color;
     cursor:pointer;
 }
-footer #controls:hover{
+
+footer #controls:hover,footer #controls1:hover{
     background-color: #F8E9DB;
     color: #141414;
+}
+
+footer .dropdown-button{
+    background-color: rgba(20,20,20,0.3);
+}
+footer .dropdown-button:hover{
+    background-color: #F8E9DB;
+    color: #141414;
+}
+
+footer .row{
+    margin-top: 100px;
+}
+footer .idiomas .dropdown-content{
+    background-color: rgba(20,20,20,0.3);
+}
+footer .idiomas .dropdown-content li{
+    height: 20px;
+    width: auto;
+}
+footer .idiomas .dropdown-content li a{
+    color: $secondary-color; 
+}
+footer .idiomas .dropdown-content li a:hover{
+    background-color: #F8E9DB;
+    color: #141414;
+}
+footer .camilo small{
+    color: $secondary-color;
+}
+footer{
+    
+    #controls{
+        position: relative;
+        #volume1{
+            position: absolute;
+            transform: rotate(270deg);
+            bottom: 60px;
+            left: 0;
+            right: 0;
+        }
+        span{
+            display: none !important;
+        }
+    }
 }
 
 
@@ -136,7 +182,7 @@ footer #controls:hover{
     width: 200px;
     margin-top: 15%;
     }
-    li{
+    #contenedor li{
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -150,12 +196,16 @@ footer #controls:hover{
             height: auto;
             padding: 20px 2px;
         }
-        #controls{
+        #controls,#controls1{
             width: 30px;
             height: auto;
             padding: 20px 5px;
         }
+        .row{
+            margin-top: 50px;
+        }
     }
+
 }
 
 /* Smartphones (portrait) ----------- */
@@ -164,7 +214,7 @@ footer #controls:hover{
     width: 200px;
     margin-top: 20%;
     }
-    li{
+    #contenedor li{
     width: 50px;
     height: 50px;
     margin: 5px;
@@ -178,10 +228,13 @@ footer #controls:hover{
             height: auto;
             padding: 20px 2px;
         }
-        #controls{
+        #controls,#controls1{
             width: 30px;
             height: auto;
             padding: 20px 5px;
+        }
+        .row{
+            margin-top: 50px;
         }
     }    
 }
