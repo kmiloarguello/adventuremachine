@@ -6399,55 +6399,64 @@ body {
 #contenedor {
   width: 400px;
   margin-top: 10%;
-  display: block;
   text-align: center;
   display: inline-block; }
+  #contenedor ul {
+    width: 90%;
+    list-style-type: none;
+    -moz-transform: rotate(45deg);
+    -webkit-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+    text-align: center;
+    display: inline-block; }
+    #contenedor ul li {
+      width: 100px;
+      height: 100px;
+      float: left;
+      margin: 5px;
+      cursor: pointer;
+      border: 1px solid rgba(0, 0, 0, 0.17); }
 
-#contenedor ul {
-  width: 90%;
-  list-style-type: none;
-  -webkit-transform: rotate(45deg);
-  -moz-transform: rotate(45deg);
-  -o-transform: rotate(45deg);
-  transform: rotate(45deg);
-  display: block;
-  text-align: center;
-  display: inline-block; }
-
-#contenedor li {
-  width: 100px;
-  height: 100px;
-  float: left;
-  margin: 5px;
-  cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.17); }
-
-ul #btnHousing1, ul #btnHousing5, ul #btnHousing9 {
+ul #btnHousing1,
+ul #btnHousing5,
+ul #btnHousing9 {
   background-color: rgba(33, 208, 168, 0.37); }
+  ul #btnHousing1:hover,
+  ul #btnHousing5:hover,
+  ul #btnHousing9:hover {
+    background-color: rgba(10, 253, 204, 0.64); }
+  ul #btnHousing1:active,
+  ul #btnHousing5:active,
+  ul #btnHousing9:active {
+    background-color: #0AFDCC; }
 
-ul #btnHousing1:hover, ul #btnHousing5:hover, ul #btnHousing9:hover {
-  background-color: rgba(10, 253, 204, 0.64); }
-
-ul #btnHousing1.toggled, ul #btnHousing5.toggled, ul #btnHousing9.toggled {
-  background-color: #0AFDCC; }
-
-ul #btnHousing2, ul #btnHousing3, ul #btnHousing6 {
+ul #btnHousing2,
+ul #btnHousing3,
+ul #btnHousing6 {
   background-color: rgba(175, 46, 80, 0.47); }
+  ul #btnHousing2:hover,
+  ul #btnHousing3:hover,
+  ul #btnHousing6:hover {
+    background-color: rgba(212, 33, 79, 0.64); }
+  ul #btnHousing2:active,
+  ul #btnHousing3:active,
+  ul #btnHousing6:active {
+    background-color: #D4214F; }
 
-ul #btnHousing2:hover, ul #btnHousing3:hover, ul #btnHousing6:hover {
-  background-color: rgba(212, 33, 79, 0.64); }
-
-ul #btnHousing2.toggled, ul #btnHousing3.toggled, ul #btnHousing6.toggled {
-  background-color: #D4214F; }
-
-ul #btnHousing4, ul #btnHousing7, ul #btnHousing8 {
+ul #btnHousing4,
+ul #btnHousing7,
+ul #btnHousing8 {
   background-color: rgba(56, 75, 107, 0.32); }
-
-ul #btnHousing4:hover, ul #btnHousing7:hover, ul #btnHousing8:hover {
-  background-color: rgba(44, 100, 196, 0.64); }
-
-ul #btnHousing4.toggled, ul #btnHousing7.toggled, ul #btnHousing8.toggled {
-  background-color: #2C64C4; }
+  ul #btnHousing4:hover,
+  ul #btnHousing7:hover,
+  ul #btnHousing8:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+  ul #btnHousing4:active,
+  ul #btnHousing7:active,
+  ul #btnHousing8:active {
+    background-color: #2C64C4; }
 
 li.toggled:hover {
   background-color: rgba(212, 33, 79, 0.8); }

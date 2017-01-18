@@ -9633,6 +9633,7 @@ page('/', function (ctx, next) {
 },{"./template":55,"empty-element":3,"page":36,"title":39}],55:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
+var webaudioapi = require("../webaudioapi/index.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
@@ -9650,7 +9651,7 @@ var beatBox = yo`<div id="contenedor">
 
 module.exports = landing(beatBox);
 
-},{"../landing":57,"yo-yo":40}],56:[function(require,module,exports){
+},{"../landing":57,"../webaudioapi/index.js":63,"yo-yo":40}],56:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
@@ -9763,4 +9764,88 @@ module.exports = {
     date: new IntlRelativeFormat(local)
 };
 
-},{"./en-US":58,"./es":59,"./fr":60,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[56]);
+},{"./en-US":58,"./es":59,"./fr":60,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}],62:[function(require,module,exports){
+function BufferLoader(context, urlList, callback) {
+    this.context = context;
+    this.urlList = urlList;
+    this.onload = callback;
+    this.bufferList = new Array();
+    this.loadCount = 0;
+}
+
+BufferLoader.prototype.loadBuffer = function (url, index) {
+    var request = new XMLHttpRequest();
+    request.open("GET", url, true);
+    request.responseType = "arraybuffer";
+
+    var loader = this;
+
+    request.onload = function () {
+        loader.context.decodeAudioData(request.response, function (buffer) {
+            if (!buffer) {
+                alert('error decoding file data: ' + url);
+                return;
+            }
+            loader.bufferList[index] = buffer;
+            if (++loader.loadCount == loader.urlList.length) loader.onload(loader.bufferList);
+        });
+    };
+
+    request.onerror = function () {
+        alert('BufferLoader: XHR error');
+    };
+
+    request.send();
+};
+BufferLoader.prototype.load = function () {
+    for (var i = 0; i < this.urlList.length; ++i) this.loadBuffer(this.urlList[i], i);
+};
+
+},{}],63:[function(require,module,exports){
+var webaudioapi = require("./buffer-loader.js");
+
+/* global AudioContext */
+var context;
+/* global BufferLoader */
+var bufferLoader;
+// window.initi();
+
+function init() {
+    try {
+        context = new AudioContext();
+    } catch (e) {
+        alert("Web Audio API no es soportado por este navegador");
+    }
+    bufferLoader = new BufferLoader(context, ['worlds_mezcla.mp3', '01.mp3'], bufferLoadCompleted);
+    bufferLoader.load();
+}
+var source;
+function playSound(buffer, time) {
+    source = context.createBufferSource();
+    source.buffer = buffer;
+    source.connect(context.destination);
+    //source.playbackRate.value = 1.75;
+    //source.loop = true;
+    source.start(time);
+}
+
+function stopSound(buffer, time) {
+
+    source.stop(time);
+}
+
+function sonido(bufferList) {
+    var beat = bufferList[0];
+    var startTime = context.currentTime + 0.100; //100 milisegundos desde ahora
+    var tempo = 128; //BPM
+    var quarterNoteTime = 60 / tempo;
+    //stopSound(beat,startTime);
+    if (source && source.playbackState == source.PLAYING_STATE) {
+        source.stop(0);
+    } else {
+        playSound(beat, startTime);
+    }
+}
+function bufferLoadCompleted() {}
+
+},{"./buffer-loader.js":62}]},{},[56]);

@@ -1,5 +1,6 @@
 var yo = require("yo-yo");
 var landing = require("../landing");
+var webaudioapi = require("../webaudioapi/index.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
