@@ -1,12 +1,11 @@
 var yo = require("yo-yo");
 var landing = require("../landing");
-// var webaudioapi = require("./audio.js");
 var color = require("./scripts.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
                            
-                           <li id="btnHousing1"></li>
+                           <li id="btnHousing1" onclick=${reproducir}></li>
                            <li id="btnHousing2"></li>
                            <li id="btnHousing3"></li>
                            <li id="btnHousing4"></li>
@@ -24,7 +23,7 @@ module.exports = landing(beatBox);
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
 
 var audioCtx = new AudioContext();
-
+var sonido;
 function playSound(buffer){
     var src = audioCtx.createBufferSource();
     src.buffer = buffer;
@@ -33,14 +32,21 @@ function playSound(buffer){
 }
 
 var request = new XMLHttpRequest();
-request.open("GET","worlds_mezcla.mp3",true);
+request.open("GET","01.mp3",true);
 request.responseType = "arraybuffer"
 
 request.onload = function(argument){
-    audioCtx.decodeAudioData(request.response, playSound, error);
+    audioCtx.decodeAudioData(request.response, startShow, error);
 }
 
 function error(){
     alert("error" + error);
+}
+
+function startShow(buffer){
+    sonido = buffer;
+}
+function reproducir() {
+    playSound(sonido);
 }
 request.send();
