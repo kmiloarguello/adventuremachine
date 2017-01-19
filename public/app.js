@@ -9526,7 +9526,7 @@ page('/about-me', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"../translate":61,"./template":50,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
+},{"../translate":62,"./template":50,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
@@ -9537,7 +9537,7 @@ var aboutme = yo`<div><p>${ translate.message('texto_ab') }</p>
 
 module.exports = landing(aboutme);
 
-},{"../landing":57,"../translate":61,"yo-yo":40}],51:[function(require,module,exports){
+},{"../landing":58,"../translate":62,"yo-yo":40}],51:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -9562,7 +9562,7 @@ var adventure = yo`<div>
 
 module.exports = landing(adventure);
 
-},{"../landing":57,"../translate":61,"yo-yo":40}],53:[function(require,module,exports){
+},{"../landing":58,"../translate":62,"yo-yo":40}],53:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9617,7 +9617,7 @@ function slider() {
 
 document.body.appendChild(el);
 
-},{"../translate":61,"yo-yo":40}],54:[function(require,module,exports){
+},{"../translate":62,"yo-yo":40}],54:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -9630,28 +9630,65 @@ page('/', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"./template":55,"empty-element":3,"page":36,"title":39}],55:[function(require,module,exports){
+},{"./template":56,"empty-element":3,"page":36,"title":39}],55:[function(require,module,exports){
+var yo = require("yo-yo");
+
+var color = yo`<script>
+                $('#btnHousing1').click(function(){
+                    $('#btnHousing1').toggleClass("box-green");
+                 });
+                 $('#btnHousing2').click(function(){
+                    $('#btnHousing2').toggleClass("box-red");
+                 });
+                 $('#btnHousing3').click(function(){
+                    $('#btnHousing3').toggleClass("box-red");
+                 });
+                 $('#btnHousing4').click(function(){
+                    $('#btnHousing4').toggleClass("box-blue");
+                 });
+                 $('#btnHousing5').click(function(){
+                    $('#btnHousing5').toggleClass("box-green");
+                 });
+                 $('#btnHousing6').click(function(){
+                    $('#btnHousing6').toggleClass("box-red");
+                 });
+                 $('#btnHousing7').click(function(){
+                    $('#btnHousing7').toggleClass("box-blue");
+                 });
+                 $('#btnHousing8').click(function(){
+                    $('#btnHousing8').toggleClass("box-blue");
+                 });
+                 $('#btnHousing9').click(function(){
+                    $('#btnHousing9').toggleClass("box-green");
+                 });
+                </script>`;
+
+module.exports = color;
+
+},{"yo-yo":40}],56:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var webaudioapi = require("../webaudioapi/index.js");
+var color = require("./scripts.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
-                           <li id="btnHousing1"  onclick="btnColor('btnHousing1'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing2"  onclick="btnColor('btnHousing2'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing3"  onclick="btnColor('btnHousing3'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing4"  onclick="btnColor('btnHousing4'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing5"  onclick="btnColor('btnHousing5'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing6"  onclick="btnColor('btnHousing6'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing7"  onclick="btnColor('btnHousing7'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing8"  onclick="btnColor('btnHousing8'); sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing9"  onclick="btnColor('btnHousing9'); sonido(bufferLoader.bufferList);"></li>
+                           <li id="btnHousing1"></li>
+                           <li id="btnHousing2"></li>
+                           <li id="btnHousing3"></li>
+                           <li id="btnHousing4"></li>
+                           <li id="btnHousing5"></li>
+                           <li id="btnHousing6"></li>
+                           <li id="btnHousing7"></li>
+                           <li id="btnHousing8"></li>
+                           <li id="btnHousing9"></li>
+                            ${ color }
                         </ul>
                     </div>`;
 
 module.exports = landing(beatBox);
 
-},{"../landing":57,"../webaudioapi/index.js":63,"yo-yo":40}],56:[function(require,module,exports){
+},{"../landing":58,"../webaudioapi/index.js":64,"./scripts.js":55,"yo-yo":40}],57:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
@@ -9661,7 +9698,7 @@ require('./footer');
 
 page();
 
-},{"./about-me":49,"./adventure":51,"./footer":53,"./homepage":54,"page":36}],57:[function(require,module,exports){
+},{"./about-me":49,"./adventure":51,"./footer":53,"./homepage":54,"page":36}],58:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9678,7 +9715,7 @@ module.exports = function landing(box) {
                 </div>`;
 };
 
-},{"../translate":61,"yo-yo":40}],58:[function(require,module,exports){
+},{"../translate":62,"yo-yo":40}],59:[function(require,module,exports){
 module.exports = {
     'english': 'English',
     'french': 'Français',
@@ -9694,7 +9731,7 @@ module.exports = {
     'texto_ab_t': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet doloremagna aliquam erat volutpat. Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nislut aliquip ex ea commodo consequat. Duis autem vel eum iriuredolor in hendrerit in vulputate velit esse molestie consequat,vel illum dolore eu feugiat nulla facilisis at vero eros etaccumsan et iusto odio dignissim qui blandit praesent luptatum delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option conguenihil imperdiet doming id quod mazim placerat facer possimassum. Typi non habent claritatem insitam; est usus legentisin iis qui facit eorum claritatem. Investigationesemonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationemconsuetudium lectorum. Mirum est notare quam littera gothica,quam nunc putamus parum claram, anteposuerit litterarum formashumanitatis per seacula quarta decima et quinta decima. Eodemmodo typi, qui nunc nobis videntur parum clari, fiant sollemnesin futurum.'
 };
 
-},{}],59:[function(require,module,exports){
+},{}],60:[function(require,module,exports){
 module.exports = {
     'english': 'Inglés',
     'french': 'Français',
@@ -9710,7 +9747,7 @@ module.exports = {
     'texto_ab_t': 'Lorem ipsum dolor sit amet, consectetuer adipiscing elit,sed diam nonummy nibh euismod tincidunt ut laoreet doloremagna aliquam erat volutpat. Ut wisi enim ad minim veniam,quis nostrud exerci tation ullamcorper suscipit lobortis nislut aliquip ex ea commodo consequat. Duis autem vel eum iriuredolor in hendrerit in vulputate velit esse molestie consequat,vel illum dolore eu feugiat nulla facilisis at vero eros etaccumsan et iusto odio dignissim qui blandit praesent luptatum delenit augue duis dolore te feugait nulla facilisi.Nam liber tempor cum soluta nobis eleifend option conguenihil imperdiet doming id quod mazim placerat facer possimassum. Typi non habent claritatem insitam; est usus legentisin iis qui facit eorum claritatem. Investigationesemonstraverunt lectores legere me lius quod ii legunt saepius.Claritas est etiam processus dynamicus, qui sequitur mutationemconsuetudium lectorum. Mirum est notare quam littera gothica,quam nunc putamus parum claram, anteposuerit litterarum formashumanitatis per seacula quarta decima et quinta decima. Eodemmodo typi, qui nunc nobis videntur parum clari, fiant sollemnesin futurum.'
 };
 
-},{}],60:[function(require,module,exports){
+},{}],61:[function(require,module,exports){
 module.exports = {
   'english': 'Ingles',
   'french': 'Français',
@@ -9726,7 +9763,7 @@ module.exports = {
   'texto_ab_t': 'Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français.'
 };
 
-},{}],61:[function(require,module,exports){
+},{}],62:[function(require,module,exports){
 if (!window.Intl) {
     window.Intl = require('intl');
     require("intl/locale-data/jsonp/en-US.js");
@@ -9764,7 +9801,7 @@ module.exports = {
     date: new IntlRelativeFormat(local)
 };
 
-},{"./en-US":58,"./es":59,"./fr":60,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}],62:[function(require,module,exports){
+},{"./en-US":59,"./es":60,"./fr":61,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}],63:[function(require,module,exports){
 function BufferLoader(context, urlList, callback) {
     this.context = context;
     this.urlList = urlList;
@@ -9801,7 +9838,7 @@ BufferLoader.prototype.load = function () {
     for (var i = 0; i < this.urlList.length; ++i) this.loadBuffer(this.urlList[i], i);
 };
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 var webaudioapi = require("./buffer-loader.js");
 
 /* global AudioContext */
@@ -9848,4 +9885,4 @@ function sonido(bufferList) {
 }
 function bufferLoadCompleted() {}
 
-},{"./buffer-loader.js":62}]},{},[56]);
+},{"./buffer-loader.js":63}]},{},[57]);

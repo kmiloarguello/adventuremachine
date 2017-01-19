@@ -53,6 +53,15 @@ body{
   }
 }
 
+.box-green{
+  background-color: $verde_activo !important;
+}
+.box-red{
+  background-color: $rojo_activo !important;
+}
+.box-blue{
+  background-color: $azul_activo !important;
+}
 
 ul{
     #btnHousing1,
@@ -97,29 +106,41 @@ p,h1{
     color:$secondary-color;  
 }
 footer{
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 2;
-    margin-top: 80px;
-}
-footer #about{
-    width: 100px;
-    height: auto;
-    padding: 20px 5px;
-    background-color: rgba(20,20,20,0.3);
-    display: block;
-    text-align: center;
-    display: inline-block;
-    color: $secondary-color;
-    cursor:pointer;
-}
-footer #about:hover{
-    background-color: #F8E9DB;
-    color: #141414;
-}
-
-footer #controls,footer #controls1{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  margin-top: 80px;
+  #about{
+      width: 100px;
+      height: auto;
+      padding: 20px 5px;
+      background-color: rgba(20,20,20,0.3);
+      display: block;
+      text-align: center;
+      display: inline-block;
+      color: $secondary-color;
+      cursor:pointer;
+      &:hover{
+        background-color: #F8E9DB;
+        color: #141414;          
+      }
+  }
+  #controls{
+    position: relative;
+    #volume1{
+      position: absolute;
+      transform: rotate(270deg);
+      bottom: 60px;
+      left: 0;
+      right: 0;
+    }
+    span{
+      display: none !important;
+    }
+  }
+  #controls,
+  #controls1{
     width: 50px;
     height: auto;
     padding: 20px 5px;
@@ -129,70 +150,60 @@ footer #controls,footer #controls1{
     display: inline-block;
     color: $secondary-color;
     cursor:pointer;
-}
-
-footer #controls:hover,footer #controls1:hover{
-    background-color: #F8E9DB;
-    color: #141414;
-}
-
-footer .dropdown-button{
-    background-color: rgba(20,20,20,0.3);
-}
-footer .dropdown-button:hover{
-    background-color: #F8E9DB;
-    color: #141414;
-}
-
-footer .row{
-    margin-top: 100px;
-}
-footer .idiomas .dropdown-content{
-    background-color: rgba(20,20,20,0.3);
-}
-footer .idiomas .dropdown-content li{
-    height: 20px;
-    width: auto;
-}
-footer .idiomas .dropdown-content li a{
-    color: $secondary-color; 
-}
-footer .idiomas .dropdown-content li a:hover{
-    background-color: #F8E9DB;
-    color: #141414;
-}
-footer .camilo small{
-    color: $secondary-color;
-}
-footer{
-    
-    #controls{
-        position: relative;
-        #volume1{
-            position: absolute;
-            transform: rotate(270deg);
-            bottom: 60px;
-            left: 0;
-            right: 0;
-        }
-        span{
-            display: none !important;
-        }
+    &:hover{
+      background-color: #F8E9DB;
+      color: #141414;
     }
+  }
+  .dropdown-button{
+      background-color: rgba(20,20,20,0.3);
+      &:hover{
+        background-color: #F8E9DB;
+        color: #141414;
+      }
+  } 
+  .row{
+    margin-top: 100px;
+  }
+  .idiomas{
+    .dropdown-content{
+      background-color: rgba(20,20,20,0.3);
+      li{
+        height: 20px;
+        width: auto;
+        a{
+          color: $secondary-color;
+          &:hover{
+            background-color: #F8E9DB;
+            color: #141414;            
+          }
+        }
+      }
+    }
+  }
+  .camilo{
+    small{
+      color: $secondary-color;
+    }
+  }
+  
+  
 }
+
+
 
 
 
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
     #contenedor{
-    width: 200px;
-    margin-top: 15%;
-    }
-    #contenedor li{
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+      width: 200px;
+      margin-top: 15%;
+      li{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+      }
     }
     h1{
         font-size: 30px;
@@ -218,13 +229,13 @@ footer{
 /* Smartphones (portrait) ----------- */
 @media only screen and (max-width : 320px) {
     #contenedor{
-    width: 200px;
-    margin-top: 20%;
-    }
-    #contenedor li{
-    width: 50px;
-    height: 50px;
-    margin: 5px;
+      width: 200px;
+      margin-top: 20%;
+      li{
+        width: 50px;
+        height: 50px;
+        margin: 5px;
+      }
     }
     h1{
         font-size: 30px;
