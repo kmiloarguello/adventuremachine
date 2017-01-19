@@ -1,10 +1,11 @@
-var webaudioapi = require("./buffer-loader.js");
+var yo = require("yo-yo");
 
+module.exports = yo`
+<script>
 /* global AudioContext */
 var context;
 /* global BufferLoader */
 var bufferLoader;
-// window.initi();
 
 function init() {
     try {
@@ -26,7 +27,6 @@ function playSound(buffer, time) {
     source = context.createBufferSource();
     source.buffer = buffer;
     source.connect(context.destination);
-    //source.playbackRate.value = 1.75;
     //source.loop = true;
     source.start(time);
     
@@ -42,7 +42,6 @@ function sonido(bufferList) {
     var startTime = context.currentTime + 0.100;//100 milisegundos desde ahora
     var tempo = 128; //BPM
     var quarterNoteTime = 60 / tempo;
-    //stopSound(beat,startTime);
    if (source && source.playbackState == source.PLAYING_STATE){
        source.stop(0);
    }
@@ -52,3 +51,5 @@ function sonido(bufferList) {
 }
 function bufferLoadCompleted(){
 }
+</script>
+`;

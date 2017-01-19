@@ -30,7 +30,8 @@ var el = yo`<footer>
                     <small>2016 | Camilo Λrguello ®</small>
                 </div>
               </div>
-            </footer>`;
+            </footer>
+            `;
 
 /* global localStorage */
 /* global location */
