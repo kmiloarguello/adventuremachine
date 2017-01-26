@@ -6473,6 +6473,28 @@ li.toggled:hover {
 p, h1 {
   color: #ecf0f1; }
 
+.collection .collection-item.avatar {
+  min-height: 65px !important; }
+
+.collection .collection-item span, .collection .collection-item p {
+  color: #000;
+  float: left; }
+
+.collection #descripcion p {
+  padding: 0 10px 0 10px;
+  text-shadow: 1px 1px #000; }
+
+#technologies {
+  margin: 0 20px 0 20px; }
+  #technologies ul {
+    text-align: center; }
+    #technologies ul li {
+      display: inline-block;
+      margin-left: 20px; }
+      #technologies ul li img {
+        width: 100px;
+        height: 100px; }
+
 footer {
   position: absolute;
   left: 0;

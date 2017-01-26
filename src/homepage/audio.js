@@ -1,11 +1,9 @@
-var yo = require("yo-yo");
 
-module.exports = yo`
-<script>
 /* global AudioContext */
 var context;
 /* global BufferLoader */
 var bufferLoader;
+window.onload = init;
 
 function init() {
     try {
@@ -51,5 +49,3 @@ function sonido(bufferList) {
 }
 function bufferLoadCompleted(){
 }
-</script>
-`;

@@ -27,7 +27,7 @@ var el = yo`<footer>
                 </div>
                 
                 <div class="col s12 m6 camilo"> 
-                    <small>2016 | Camilo Λrguello ®</small>
+                    <small>2017 | Camilo Λrguello ®</small>
                 </div>
               </div>
             </footer>
