@@ -6473,16 +6473,15 @@ li.toggled:hover {
 p, h1 {
   color: #ecf0f1; }
 
-.collection .collection-item.avatar {
-  min-height: 65px !important; }
-
-.collection .collection-item span, .collection .collection-item p {
-  color: #000;
-  float: left; }
-
-.collection #descripcion p {
-  padding: 0 10px 0 10px;
-  text-shadow: 1px 1px #000; }
+.collection {
+  background: rgba(0, 0, 0, 0.3); }
+  .collection .collection-item.avatar {
+    min-height: 65px !important; }
+  .collection .collection-item span, .collection .collection-item p {
+    color: #000;
+    float: left; }
+  .collection #descripcion p {
+    padding: 0 10px 0 10px; }
 
 #technologies {
   margin: 0 20px 0 20px; }

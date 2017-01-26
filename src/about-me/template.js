@@ -21,12 +21,8 @@ var aboutme = yo`<div>
                     <li id="technologies">
                       <ul>
                         <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
                       </ul>                    
-                    <li>
+                    </li>
                   </ul> 
                 </div>
        
