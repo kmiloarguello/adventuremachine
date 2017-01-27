@@ -1,4 +1,7 @@
 var express = require("express");
+var React = require("react");
+var ReactDOMServer = require("react-dom/server.js");
+var comp = require("./src/about-me/comp.jsx");
 
 var app = express();
 
@@ -7,15 +10,18 @@ app.set('view engine', 'pug');
 app.use(express.static('public'))
 
 app.get('/', function (req, res) {
-  res.render('index', { title: 'Adventure Machine' })
+  res.render('index', { title: 'Adventure Machine' });
 });
 
 app.get('/about-me', function (req, res) {
-  res.render('index', { title: 'About Camilo' })
+  var elemento = ReactDOMServer.renderToString(
+    React.createElement(comp)
+    );
+  res.render('index', { title: 'About Camilo' });
 });
 
 app.get('/adventure', function (req, res) {
-  res.render('index', { title: 'What is it?' })
+  res.render('index', { title: 'What is it?' });
 });
 
 app.listen(process.env.PORT, process.env.IP);

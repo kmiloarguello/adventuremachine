@@ -9517,7 +9517,6 @@ var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
 var title = require("title");
-var translate = require("../translate");
 
 var main = document.getElementById('main-container');
 
@@ -9526,7 +9525,7 @@ page('/about-me', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"../translate":62,"./template":50,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
+},{"./template":50,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
@@ -9550,18 +9549,14 @@ var aboutme = yo`<div>
                     <li id="technologies">
                       <ul>
                         <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
                       </ul>                    
                     </li>
                   </ul> 
                 </div>
-       
                 </div>`;
-
 module.exports = landing(aboutme);
+
+console.log(translate.message('texto_ab_t'));
 
 },{"../landing":58,"../translate":62,"yo-yo":40}],51:[function(require,module,exports){
 var page = require("page");

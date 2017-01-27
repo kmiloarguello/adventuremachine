@@ -25,7 +25,8 @@ var aboutme = yo`<div>
                     </li>
                   </ul> 
                 </div>
-       
                 </div>`;
-                    
 module.exports = landing(aboutme);
+
+console.log(translate.message('texto_ab_t'));
+
