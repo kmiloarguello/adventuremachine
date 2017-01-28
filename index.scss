@@ -105,7 +105,7 @@ ul{
 li.toggled:hover{
     background-color: rgba(212,33,79,0.8);
 }
-p,h1{
+h1{
     color:$secondary-color;  
 }
 
@@ -123,6 +123,7 @@ p,h1{
   #descripcion{
     p{
       padding: 0 10px 0 10px;
+      color: $secondary-color;
     }
   }  
 }
@@ -190,7 +191,13 @@ p,h1{
     cursor:pointer;
     &:hover{
       background-color: $boton-amarillo;
-      color: $letra-hover-negro
+      color: $letra-hover-negro;
+    }
+    .hide{
+      display: none;
+    }
+    .no-like{
+      display: none;
     }
   }
   

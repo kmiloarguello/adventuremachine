@@ -9525,11 +9525,46 @@ page('/about-me', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"./template":50,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
+},{"./template":51,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
+var translate = require("../translate");
+var yo = require("yo-yo");
+
+module.exports = yo`<div>
+                    <div class="card col s12 m6 l4">
+                      <div class="card-image waves-effect waves-block waves-light">
+                        <img class="activator" src="juli.jpg">
+                      </div>
+                      <div class="card-content">
+                        <span class="card-title activator grey-text text-darken-4">Juliana Ruiz<i class="fa fa-angle-up right" aria-hidden="true"></i></span>
+                        <p><a href="#">Website for a company</a></p>
+                      </div>
+                      <div class="card-reveal">
+                        <span class="card-title grey-text text-darken-4">K@PTA Website<i class="fa fa-angle-down right" aria-hidden="true"></i></span>
+                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                          <div class="chip">
+                            Website
+                          </div>
+                          <div class="chip">
+                            HTML5
+                          </div>
+                          <div class="chip">
+                            SASS
+                          </div>
+                          <div class="chip">
+                            JQuery
+                          </div>
+                      </div>
+                    </div>
+                    </div>
+
+`;
+
+},{"../translate":66,"yo-yo":40}],51:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
 var menu = require("../menu/menu-about.js");
+var card = require("./proyectos.js");
 
 var aboutme = yo`<div>
                 ${ menu }
@@ -9548,11 +9583,11 @@ var aboutme = yo`<div>
                     <li id="descripcion">
                         <p>${ translate.message('texto_ab_t') }</p>
                     </li>
-                    <li id="technologies">
-                      <ul>
-                        <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
-                      </ul>                    
-                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <ul class="collection">
+                  <li>${ card }</li>
                   </ul>
                 </div>
                 </div>`;
@@ -9560,7 +9595,7 @@ module.exports = landing(aboutme);
 
 console.log(translate.message('texto_ab_t'));
 
-},{"../landing":58,"../menu/menu-about.js":59,"../translate":65,"yo-yo":40}],51:[function(require,module,exports){
+},{"../landing":59,"../menu/menu-about.js":60,"../translate":66,"./proyectos.js":50,"yo-yo":40}],52:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -9573,7 +9608,7 @@ page('/adventure', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"./template":52,"empty-element":3,"page":36,"title":39}],52:[function(require,module,exports){
+},{"./template":53,"empty-element":3,"page":36,"title":39}],53:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
@@ -9587,7 +9622,7 @@ var adventure = yo`<div>
 
 module.exports = landing(adventure);
 
-},{"../landing":58,"../menu/menu-it.js":61,"../translate":65,"yo-yo":40}],53:[function(require,module,exports){
+},{"../landing":59,"../menu/menu-it.js":62,"../translate":66,"yo-yo":40}],54:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9621,7 +9656,7 @@ function lang(local) {
 
 document.body.appendChild(el);
 
-},{"../translate":65,"yo-yo":40}],54:[function(require,module,exports){
+},{"../translate":66,"yo-yo":40}],55:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -9634,7 +9669,7 @@ page('/', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"./template":56,"empty-element":3,"page":36,"title":39}],55:[function(require,module,exports){
+},{"./template":57,"empty-element":3,"page":36,"title":39}],56:[function(require,module,exports){
 var yo = require("yo-yo");
 
 var color = yo`<script>
@@ -9669,7 +9704,7 @@ var color = yo`<script>
 
 module.exports = color;
 
-},{"yo-yo":40}],56:[function(require,module,exports){
+},{"yo-yo":40}],57:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var color = require("./scripts.js");
@@ -9693,7 +9728,7 @@ var beatBox = yo`<div id="contenedor">
 
 module.exports = landing(beatBox);
 
-},{"../landing":58,"../menu/menu-home.js":60,"./scripts.js":55,"yo-yo":40}],57:[function(require,module,exports){
+},{"../landing":59,"../menu/menu-home.js":61,"./scripts.js":56,"yo-yo":40}],58:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
@@ -9703,7 +9738,7 @@ require('./footer');
 
 page();
 
-},{"./about-me":49,"./adventure":51,"./footer":53,"./homepage":54,"page":36}],58:[function(require,module,exports){
+},{"./about-me":49,"./adventure":52,"./footer":54,"./homepage":55,"page":36}],59:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9720,7 +9755,7 @@ module.exports = function landing(box) {
                 </div>`;
 };
 
-},{"../translate":65,"yo-yo":40}],59:[function(require,module,exports){
+},{"../translate":66,"yo-yo":40}],60:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9732,7 +9767,7 @@ module.exports = yo`<div id="menu">
                       
                   </div>`;
 
-},{"../translate":65,"yo-yo":40}],60:[function(require,module,exports){
+},{"../translate":66,"yo-yo":40}],61:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9740,11 +9775,16 @@ module.exports = yo`<div id="menu">
 
               <a href="/about-me"><div id="about"><small>${ translate.message('about') }</small></div></a>
               
-              <div id="controls" onclick=${ onchange }>
-                <small id="sm1"><i aria-hidden="true" class="fa fa-play"></i></small>
-                <small id="sm2" class="hide"><i class="fa fa-pause" aria-hidden="true"></i></small>
-              </div>
+              <div id="controls" onclick=${ liked }>
+                <small id="no-like" class="no-like"><i class="fa fa-heart" aria-hidden="true"></i></small>
+                <small id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></small>
+              </div>              
               
+              <div id="controls" onclick=${ onchange }>
+                <p id="sm1"><i aria-hidden="true" class="fa fa-play"></i></p>
+                <p id="sm2" class="hide"><i class="fa fa-stop" aria-hidden="true"></i></p>
+              </div>
+            
               <div id="controls" class="range-field" onclick=${ slider }>
                 <small><i aria-hidden="true" class="fa fa-volume-up"></i></small>
                 <input class="hide" type="range" id="volume1" min=0 max=100 step=0 value='30'/>
@@ -9759,12 +9799,16 @@ function onchange() {
   document.getElementById('sm1').classList.toggle('hide');
   document.getElementById('sm2').classList.toggle('hide');
 }
+function liked() {
+  document.getElementById('no-like').classList.toggle('no-like');
+  document.getElementById('like').classList.toggle('no-like');
+}
 
 function slider() {
   document.getElementById('volume1').classList.toggle('hide');
 }
 
-},{"../translate":65,"yo-yo":40}],61:[function(require,module,exports){
+},{"../translate":66,"yo-yo":40}],62:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -9776,7 +9820,7 @@ module.exports = yo`<div id="menu">
                       
                   </div>`;
 
-},{"../translate":65,"yo-yo":40}],62:[function(require,module,exports){
+},{"../translate":66,"yo-yo":40}],63:[function(require,module,exports){
 module.exports = {
     'english': 'English',
     'french': 'Français',
@@ -9794,7 +9838,7 @@ module.exports = {
     'texto_ab_t': 'My name is Camilo Arguello and I\'m from Colombia and I am Multimedia Engineer. I love the programming, special effects and 2D/3D animation. I´ve always loved solving problems, especially to design innovate and interactive contents, whether of computer graphics, animation, programming to deliver a memorable experience. Also with a great ability to learn new technologies, with a extensive leadership. I\'ve always been fascinated with the idea of generating interactive content that provide a lifetime experience. I am currently working on web development, making applications and websites.'
 };
 
-},{}],63:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 module.exports = {
     'english': 'Inglés',
     'french': 'Français',
@@ -9812,7 +9856,7 @@ module.exports = {
     'texto_ab_t': 'Soy Camilo Arguello y soy Colombiano, Quiero ser Fullstackdeveloper. Y extraño a Juli'
 };
 
-},{}],64:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 module.exports = {
   'english': 'Ingles',
   'french': 'Français',
@@ -9830,7 +9874,7 @@ module.exports = {
   'texto_ab_t': 'Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français.'
 };
 
-},{}],65:[function(require,module,exports){
+},{}],66:[function(require,module,exports){
 if (!window.Intl) {
     window.Intl = require('intl');
     require("intl/locale-data/jsonp/en-US.js");
@@ -9868,4 +9912,4 @@ module.exports = {
     date: new IntlRelativeFormat(local)
 };
 
-},{"./en-US":62,"./es":63,"./fr":64,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[57]);
+},{"./en-US":63,"./es":64,"./fr":65,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[58]);
