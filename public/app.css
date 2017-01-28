@@ -6494,13 +6494,12 @@ p, h1 {
         width: 100px;
         height: 100px; }
 
-footer {
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
+#menu {
   margin-top: 80px; }
-  footer #about {
+  #menu .menu-activo {
+    background-color: #f8e9db !important;
+    color: #141414 !important; }
+  #menu #about {
     width: 100px;
     height: auto;
     padding: 20px 5px;
@@ -6510,21 +6509,21 @@ footer {
     display: inline-block;
     color: #ecf0f1;
     cursor: pointer; }
-    footer #about:hover {
-      background-color: #F8E9DB;
+    #menu #about:hover {
+      background-color: #f8e9db;
       color: #141414; }
-  footer #controls {
+  #menu #controls {
     position: relative; }
-    footer #controls #volume1 {
+    #menu #controls #volume1 {
       position: absolute;
       transform: rotate(270deg);
       bottom: 60px;
       left: 0;
       right: 0; }
-    footer #controls span {
+    #menu #controls span {
       display: none !important; }
-  footer #controls,
-  footer #controls1 {
+  #menu #controls,
+  #menu #controls1 {
     width: 50px;
     height: auto;
     padding: 20px 5px;
@@ -6534,14 +6533,20 @@ footer {
     display: inline-block;
     color: #ecf0f1;
     cursor: pointer; }
-    footer #controls:hover,
-    footer #controls1:hover {
-      background-color: #F8E9DB;
+    #menu #controls:hover,
+    #menu #controls1:hover {
+      background-color: #f8e9db;
       color: #141414; }
+
+footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2; }
   footer .dropdown-button {
     background-color: rgba(20, 20, 20, 0.3); }
     footer .dropdown-button:hover {
-      background-color: #F8E9DB;
+      background-color: #f8e9db;
       color: #141414; }
   footer .row {
     margin-top: 100px; }
@@ -6553,7 +6558,7 @@ footer {
       footer .idiomas .dropdown-content li a {
         color: #ecf0f1; }
         footer .idiomas .dropdown-content li a:hover {
-          background-color: #F8E9DB;
+          background-color: #f8e9db;
           color: #141414; }
   footer .camilo small {
     color: #ecf0f1; }

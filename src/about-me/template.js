@@ -1,8 +1,10 @@
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
+var menu = require("../menu/menu-about.js");
 
 var aboutme = yo`<div>
+                ${menu}
                 <div id="section1">
                   <ul class="collection">
                     <li class="collection-item avatar">
@@ -23,7 +25,7 @@ var aboutme = yo`<div>
                         <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
                       </ul>                    
                     </li>
-                  </ul> 
+                  </ul>
                 </div>
                 </div>`;
 module.exports = landing(aboutme);

@@ -9529,8 +9529,10 @@ page('/about-me', function (ctx, next) {
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
+var menu = require("../menu/menu-about.js");
 
 var aboutme = yo`<div>
+                ${ menu }
                 <div id="section1">
                   <ul class="collection">
                     <li class="collection-item avatar">
@@ -9551,14 +9553,14 @@ var aboutme = yo`<div>
                         <li><img class="circle responsive-img" src="juli.jpg" width="100px"></li>
                       </ul>                    
                     </li>
-                  </ul> 
+                  </ul>
                 </div>
                 </div>`;
 module.exports = landing(aboutme);
 
 console.log(translate.message('texto_ab_t'));
 
-},{"../landing":58,"../translate":62,"yo-yo":40}],51:[function(require,module,exports){
+},{"../landing":58,"../menu/menu-about.js":59,"../translate":65,"yo-yo":40}],51:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -9575,32 +9577,21 @@ page('/adventure', function (ctx, next) {
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
+var menu = require("../menu/menu-it.js");
 
 var adventure = yo`<div>
+                    ${ menu }
                     <p>${ translate.message('texto_ad') }</p>
                     <p>${ translate.message('texto_ad_t') }</p>
                     </div>`;
 
 module.exports = landing(adventure);
 
-},{"../landing":58,"../translate":62,"yo-yo":40}],53:[function(require,module,exports){
+},{"../landing":58,"../menu/menu-it.js":61,"../translate":65,"yo-yo":40}],53:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
 var el = yo`<footer>
-              <a href="/about-me"><div id="about"><small>${ translate.message('about') }</small></div></a>
-              
-              <div id="controls" onclick=${ onchange }>
-                <small id="sm1"><i aria-hidden="true" class="fa fa-play"></i></small>
-                <small id="sm2" class="hide"><i class="fa fa-pause" aria-hidden="true"></i></small>
-              </div>
-              
-              <div id="controls" class="range-field" onclick=${ slider }>
-                <small><i aria-hidden="true" class="fa fa-volume-up"></i></small>
-                <input class="hide" type="range" id="volume1" min=0 max=100 step=0 value='30'/>
-              </div>
-              
-              <a href="/adventure"><div id="about"><small>${ translate.message('whats') }</small></div></a>
               <br>
               <div class="row">
                 <div class="col s12 m6 idiomas">
@@ -9628,18 +9619,9 @@ function lang(local) {
   return false;
 }
 
-function onchange() {
-  document.getElementById('sm1').classList.toggle('hide');
-  document.getElementById('sm2').classList.toggle('hide');
-}
-
-function slider() {
-  document.getElementById('volume1').classList.toggle('hide');
-}
-
 document.body.appendChild(el);
 
-},{"../translate":62,"yo-yo":40}],54:[function(require,module,exports){
+},{"../translate":65,"yo-yo":40}],54:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -9691,6 +9673,7 @@ module.exports = color;
 var yo = require("yo-yo");
 var landing = require("../landing");
 var color = require("./scripts.js");
+var menu = require("../menu/menu-home.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
@@ -9705,36 +9688,12 @@ var beatBox = yo`<div id="contenedor">
                            <li id="btnHousing9"></li>
                             ${ color }
                         </ul>
+                        ${ menu }
                     </div>`;
 
 module.exports = landing(beatBox);
 
-/////////////////////////////
-
-/*var audioCtx = new window.AudioContext();
-var sonido;
-function playSound(buffer,time){
-    var src = audioCtx.createBufferSource();
-    src.buffer = buffer;
-    src.connect(audioCtx.destination);
-    src.start(time);
-}
-
-var request = new XMLHttpRequest();
-request.open("GET","01.mp3",true);
-request.responseType = "arraybuffer";
-
-request.onload = (argument) => {audioCtx.decodeAudioData(request.response, startShow, error)};
-var error = () => { alert("error" + error) };
-var startShow = (buffer) => { sonido = buffer };
-
-function reproducir() {
-    playSound(sonido);
-}
-request.send();
-*/
-
-},{"../landing":58,"./scripts.js":55,"yo-yo":40}],57:[function(require,module,exports){
+},{"../landing":58,"../menu/menu-home.js":60,"./scripts.js":55,"yo-yo":40}],57:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
@@ -9761,7 +9720,63 @@ module.exports = function landing(box) {
                 </div>`;
 };
 
-},{"../translate":62,"yo-yo":40}],59:[function(require,module,exports){
+},{"../translate":65,"yo-yo":40}],59:[function(require,module,exports){
+var yo = require("yo-yo");
+var translate = require("../translate");
+
+module.exports = yo`<div id="menu">
+
+                      <a href="/"><div id="about"><small>${ translate.message('gohome') }</small></div></a>
+                      <a href="/about-me"><div id="about" class="menu-activo"><small>${ translate.message('about') }</small></div></a>
+                      <a href="/adventure"><div id="about"><small>${ translate.message('whats') }</small></div></a>
+                      
+                  </div>`;
+
+},{"../translate":65,"yo-yo":40}],60:[function(require,module,exports){
+var yo = require("yo-yo");
+var translate = require("../translate");
+
+module.exports = yo`<div id="menu">
+
+              <a href="/about-me"><div id="about"><small>${ translate.message('about') }</small></div></a>
+              
+              <div id="controls" onclick=${ onchange }>
+                <small id="sm1"><i aria-hidden="true" class="fa fa-play"></i></small>
+                <small id="sm2" class="hide"><i class="fa fa-pause" aria-hidden="true"></i></small>
+              </div>
+              
+              <div id="controls" class="range-field" onclick=${ slider }>
+                <small><i aria-hidden="true" class="fa fa-volume-up"></i></small>
+                <input class="hide" type="range" id="volume1" min=0 max=100 step=0 value='30'/>
+              </div>
+              
+              <a href="/adventure"><div id="about"><small>${ translate.message('whats') }</small></div></a>
+              
+              </div>
+              `;
+
+function onchange() {
+  document.getElementById('sm1').classList.toggle('hide');
+  document.getElementById('sm2').classList.toggle('hide');
+}
+
+function slider() {
+  document.getElementById('volume1').classList.toggle('hide');
+}
+
+},{"../translate":65,"yo-yo":40}],61:[function(require,module,exports){
+var yo = require("yo-yo");
+var translate = require("../translate");
+
+module.exports = yo`<div id="menu">
+
+                      <a href="/"><div id="about"><small>${ translate.message('gohome') }</small></div></a>
+                      <a href="/adventure"><div id="about" class="menu-activo"><small>${ translate.message('whats') }</small></div></a>
+                      <a href="/about-me"><div id="about"><small>${ translate.message('about') }</small></div></a>
+                      
+                  </div>`;
+
+},{"../translate":65,"yo-yo":40}],62:[function(require,module,exports){
 module.exports = {
     'english': 'English',
     'french': 'Français',
@@ -9769,6 +9784,7 @@ module.exports = {
     'titulo': 'Adventure Machine',
     'tit_about': 'About Camilo',
     'about': 'ABOUT ME',
+    'gohome': 'HOME',
     'whats': 'WHAT IS IT?',
     'upload': 'UPLOAD SOUND',
     'texto_ad': 'What is it?',
@@ -9778,7 +9794,7 @@ module.exports = {
     'texto_ab_t': 'My name is Camilo Arguello and I\'m from Colombia and I am Multimedia Engineer. I love the programming, special effects and 2D/3D animation. I´ve always loved solving problems, especially to design innovate and interactive contents, whether of computer graphics, animation, programming to deliver a memorable experience. Also with a great ability to learn new technologies, with a extensive leadership. I\'ve always been fascinated with the idea of generating interactive content that provide a lifetime experience. I am currently working on web development, making applications and websites.'
 };
 
-},{}],60:[function(require,module,exports){
+},{}],63:[function(require,module,exports){
 module.exports = {
     'english': 'Inglés',
     'french': 'Français',
@@ -9786,6 +9802,7 @@ module.exports = {
     'titulo': 'Maquina de Aventura',
     'tit_about': 'Acerca de Camilo',
     'about': 'ACERCA DE MI',
+    'gohome': 'INICIO',
     'whats': 'QUE ES?',
     'upload': 'SUBIR AUDIO',
     'texto_ad': 'Que es?',
@@ -9795,7 +9812,7 @@ module.exports = {
     'texto_ab_t': 'Soy Camilo Arguello y soy Colombiano, Quiero ser Fullstackdeveloper. Y extraño a Juli'
 };
 
-},{}],61:[function(require,module,exports){
+},{}],64:[function(require,module,exports){
 module.exports = {
   'english': 'Ingles',
   'french': 'Français',
@@ -9803,6 +9820,7 @@ module.exports = {
   'titulo': 'La Machine d\'aventure',
   'tit_about': 'About Camilo',
   'about': 'À PROPOS DE MOI',
+  'gohome': 'DÉBUT',
   'upload': 'UPLOAD',
   'whats': 'C\'EST À QUEL PROPOS?',
   'texto_ad': 'qu\'est-ce que c\'est ?',
@@ -9812,7 +9830,7 @@ module.exports = {
   'texto_ab_t': 'Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français.'
 };
 
-},{}],62:[function(require,module,exports){
+},{}],65:[function(require,module,exports){
 if (!window.Intl) {
     window.Intl = require('intl');
     require("intl/locale-data/jsonp/en-US.js");
@@ -9850,4 +9868,4 @@ module.exports = {
     date: new IntlRelativeFormat(local)
 };
 
-},{"./en-US":59,"./es":60,"./fr":61,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[57]);
+},{"./en-US":62,"./es":63,"./fr":64,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[57]);

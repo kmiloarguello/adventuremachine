@@ -1,5 +1,8 @@
 
-$secondary-color: rgba(236, 240, 241,1.0); 
+$secondary-color: rgba(236, 240, 241,1.0); //color blanco  
+$boton-negro: rgba(20,20,20,0.3);
+$boton-amarillo: #f8e9db;
+$letra-hover-negro: #141414;
 
 $rojo: rgba(175, 46, 80, 0.47);
 $rojo_hover: rgba(212,33,79,0.64);
@@ -138,26 +141,27 @@ p,h1{
     }
   }
 }
-
-footer{
-  position: absolute;
-  left: 0;
-  right: 0;
-  z-index: 2;
+#menu{
   margin-top: 80px;
+  
+  .menu-activo{
+    background-color: $boton-amarillo !important;
+    color: $letra-hover-negro !important;
+  }  
+  
   #about{
       width: 100px;
       height: auto;
       padding: 20px 5px;
-      background-color: rgba(20,20,20,0.3);
+      background-color: $boton-negro;
       display: block;
       text-align: center;
       display: inline-block;
       color: $secondary-color;
-      cursor:pointer;
+      cursor: pointer;
       &:hover{
-        background-color: #F8E9DB;
-        color: #141414;          
+        background-color: $boton-amarillo;
+        color: $letra-hover-negro          
       }
   }
   #controls{
@@ -178,22 +182,31 @@ footer{
     width: 50px;
     height: auto;
     padding: 20px 5px;
-    background-color: rgba(20,20,20,0.3);
+    background-color: $boton-negro;
     display: block;
     text-align: center;
     display: inline-block;
     color: $secondary-color;
     cursor:pointer;
     &:hover{
-      background-color: #F8E9DB;
-      color: #141414;
+      background-color: $boton-amarillo;
+      color: $letra-hover-negro
     }
   }
+  
+}
+
+
+footer{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
   .dropdown-button{
-      background-color: rgba(20,20,20,0.3);
+      background-color: $boton-negro;
       &:hover{
-        background-color: #F8E9DB;
-        color: #141414;
+        background-color: $boton-amarillo;
+        color: $letra-hover-negro
       }
   } 
   .row{
@@ -201,15 +214,15 @@ footer{
   }
   .idiomas{
     .dropdown-content{
-      background-color: rgba(20,20,20,0.3);
+      background-color: $boton-negro;
       li{
         height: 20px;
         width: auto;
         a{
           color: $secondary-color;
           &:hover{
-            background-color: #F8E9DB;
-            color: #141414;            
+            background-color: $boton-amarillo;
+            color: $letra-hover-negro           
           }
         }
       }

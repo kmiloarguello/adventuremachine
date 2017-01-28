@@ -5,6 +5,7 @@ module.exports= {
 'titulo'      : 'La Machine d\'aventure',
 'tit_about'   : 'About Camilo',
 'about'       : 'À PROPOS DE MOI',
+'gohome'      : 'DÉBUT',
 'upload'      : 'UPLOAD',
 'whats'       : 'C\'EST À QUEL PROPOS?',
 'texto_ad'    : 'qu\'est-ce que c\'est ?',

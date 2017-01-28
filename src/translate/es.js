@@ -5,6 +5,7 @@ module.exports = {
     'titulo' : 'Maquina de Aventura',
     'tit_about' : 'Acerca de Camilo',
     'about' : 'ACERCA DE MI',
+    'gohome': 'INICIO',
     'whats' : 'QUE ES?',
     'upload' : 'SUBIR AUDIO',
     'texto_ad' : 'Que es?',

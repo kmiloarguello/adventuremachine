@@ -1,7 +1,7 @@
 var yo = require("yo-yo");
 var landing = require("../landing");
 var color = require("./scripts.js");
-
+var menu = require("../menu/menu-home.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
@@ -16,31 +16,7 @@ var beatBox = yo`<div id="contenedor">
                            <li id="btnHousing9"></li>
                             ${color}
                         </ul>
+                        ${menu}
                     </div>`;
                     
 module.exports = landing(beatBox);
-
-/////////////////////////////
-
-/*var audioCtx = new window.AudioContext();
-var sonido;
-function playSound(buffer,time){
-    var src = audioCtx.createBufferSource();
-    src.buffer = buffer;
-    src.connect(audioCtx.destination);
-    src.start(time);
-}
-
-var request = new XMLHttpRequest();
-request.open("GET","01.mp3",true);
-request.responseType = "arraybuffer";
-
-request.onload = (argument) => {audioCtx.decodeAudioData(request.response, startShow, error)};
-var error = () => { alert("error" + error) };
-var startShow = (buffer) => { sonido = buffer };
-
-function reproducir() {
-    playSound(sonido);
-}
-request.send();
-*/

@@ -5,6 +5,7 @@ module.exports = {
     'titulo' : 'Adventure Machine',
     'tit_about' : 'About Camilo',
     'about' : 'ABOUT ME',
+    'gohome': 'HOME',
     'whats' : 'WHAT IS IT?',
     'upload' : 'UPLOAD SOUND',
     'texto_ad' : 'What is it?',
