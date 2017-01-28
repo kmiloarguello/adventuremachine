@@ -13,7 +13,7 @@ function init() {
     }
     bufferLoader = new BufferLoader(context,
     [
-        '01.mp3',
+        'worlds_mezcla.mp3'
     ],
     bufferLoadCompleted);
     bufferLoader.load();
@@ -21,13 +21,12 @@ function init() {
 var source;
 function playSound(buffer, time) {
     source = context.createBufferSource();
+    console.log(source);
     source.buffer = buffer;
     source.connect(context.destination);
-    //source.loop = true;
     source.start(time);
     
 }
-
 function sonido(bufferList) {
     var beat = bufferList[0];
     var startTime = context.currentTime + 0.100;//100 milisegundos desde ahora
@@ -35,8 +34,10 @@ function sonido(bufferList) {
     var quarterNoteTime = 60 / tempo;
 
     playSound(beat, startTime);
-    
+    console.log(beat);
 }
 function bufferLoadCompleted(){
 }
+
+
 
