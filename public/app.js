@@ -9529,35 +9529,95 @@ page('/about-me', function (ctx, next) {
 var translate = require("../translate");
 var yo = require("yo-yo");
 
-module.exports = yo`<div>
-                    <div class="card col s12 m6 l4">
-                      <div class="card-image waves-effect waves-block waves-light">
-                        <img class="activator" src="juli.jpg">
-                      </div>
-                      <div class="card-content">
-                        <span class="card-title activator grey-text text-darken-4">Juliana Ruiz<i class="fa fa-angle-up right" aria-hidden="true"></i></span>
-                        <p><a href="#">Website for a company</a></p>
-                      </div>
-                      <div class="card-reveal">
-                        <span class="card-title grey-text text-darken-4">K@PTA Website<i class="fa fa-angle-down right" aria-hidden="true"></i></span>
-                        <p>Here is some more information about this product that is only revealed once clicked on.</p>
-                          <div class="chip">
-                            Website
-                          </div>
-                          <div class="chip">
-                            HTML5
-                          </div>
-                          <div class="chip">
-                            SASS
-                          </div>
-                          <div class="chip">
-                            JQuery
-                          </div>
-                      </div>
+var card1 = yo`<div>
+              <div class="card col s12 m6 l4">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="juli2.jpg" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Juliana Ruiz<i class="fa fa-angle-up right" aria-hidden="true"></i></span>
+                  <p><a href="#">Website for a company</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">K@PTA Website<i class="fa fa-angle-down right" aria-hidden="true"></i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <div class="chip">
+                      Website
                     </div>
+                    <div class="chip">
+                      HTML5
                     </div>
+                    <div class="chip">
+                      SASS
+                    </div>
+                    <div class="chip">
+                      JQuery
+                    </div>
+                </div>
+              </div>
+              </div>`;
 
-`;
+var card2 = yo`<div>
+              <div class="card col s12 m6 l4">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="juli2.jpg" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Juliana Ruiz<i class="fa fa-angle-up right" aria-hidden="true"></i></span>
+                  <p><a href="#">Website for a company</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">K@PTA Website<i class="fa fa-angle-down right" aria-hidden="true"></i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <div class="chip">
+                      Website
+                    </div>
+                    <div class="chip">
+                      HTML5
+                    </div>
+                    <div class="chip">
+                      SASS
+                    </div>
+                    <div class="chip">
+                      JQuery
+                    </div>
+                </div>
+              </div>
+              </div>`;
+
+var card3 = yo`<div>
+              <div class="card col s12 m6 l4">
+                <div class="card-image waves-effect waves-block waves-light">
+                  <img class="activator" src="juli2.jpg" height="300">
+                </div>
+                <div class="card-content">
+                  <span class="card-title activator grey-text text-darken-4">Juliana Ruiz<i class="fa fa-angle-up right" aria-hidden="true"></i></span>
+                  <p><a href="#">Website for a company</a></p>
+                </div>
+                <div class="card-reveal">
+                  <span class="card-title grey-text text-darken-4">K@PTA Website<i class="fa fa-angle-down right" aria-hidden="true"></i></span>
+                  <p>Here is some more information about this product that is only revealed once clicked on.</p>
+                    <div class="chip">
+                      Website
+                    </div>
+                    <div class="chip">
+                      HTML5
+                    </div>
+                    <div class="chip">
+                      SASS
+                    </div>
+                    <div class="chip">
+                      JQuery
+                    </div>
+                </div>
+              </div>
+              </div>`;
+
+module.exports = {
+  card1: card1,
+  card2: card2,
+  card3: card3
+};
 
 },{"../translate":66,"yo-yo":40}],51:[function(require,module,exports){
 var yo = require("yo-yo");
@@ -9587,13 +9647,19 @@ var aboutme = yo`<div>
                 </div>
                 <div>
                   <ul class="collection">
-                  <li>${ card }</li>
+                    <li class="collection-item avatar">
+                      <i class="fa fa-heart circle red" aria-hidden="true"></i>
+                      <span class="title"><b>Projects</b></span>
+                      <br>
+                      <p>See a little bit about my work</p>
+                    </li>
+                    <li>${ card.card1 }</li>
+                    <li>${ card.card2 }</li>
+                    <li>${ card.card3 }</li>
                   </ul>
                 </div>
                 </div>`;
 module.exports = landing(aboutme);
-
-console.log(translate.message('texto_ab_t'));
 
 },{"../landing":59,"../menu/menu-about.js":60,"../translate":66,"./proyectos.js":50,"yo-yo":40}],52:[function(require,module,exports){
 var page = require("page");

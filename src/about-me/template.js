@@ -25,11 +25,18 @@ var aboutme = yo`<div>
                 </div>
                 <div>
                   <ul class="collection">
-                  <li>${card}</li>
+                    <li class="collection-item avatar">
+                      <i class="fa fa-heart circle red" aria-hidden="true"></i>
+                      <span class="title"><b>Projects</b></span>
+                      <br>
+                      <p>See a little bit about my work</p>
+                    </li>
+                    <li>${card.card1}</li>
+                    <li>${card.card2}</li>
+                    <li>${card.card3}</li>
                   </ul>
                 </div>
                 </div>`;
 module.exports = landing(aboutme);
 
-console.log(translate.message('texto_ab_t'));
 
