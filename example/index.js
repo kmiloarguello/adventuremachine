@@ -21,10 +21,10 @@ function init() {
 var source;
 function playSound(buffer, time) {
     source = context.createBufferSource();
-    console.log(source);
     source.buffer = buffer;
     source.connect(context.destination);
     source.start(time);
+    console.log(source);
     
 }
 function sonido(bufferList) {
