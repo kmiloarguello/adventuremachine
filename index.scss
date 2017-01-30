@@ -30,8 +30,15 @@ body{
   font-family: 'Comfortaa', cursive;
   text-align: center;
   background-image: url(background.jpg);
+  background-size: cover;
   background-position: center;
+  background-attachment: fixed;
+  &::-webkit-scrollbar { 
+    display: none; 
+  }  
+  
 }
+
 #contenedor{
   width: 400px;
   margin-top: 10%;
@@ -182,7 +189,7 @@ h1{
   #controls1{
     width: 50px;
     height: auto;
-    padding: 20px 5px;
+    padding: 10px 5px;
     background-color: $boton-negro;
     display: block;
     text-align: center;

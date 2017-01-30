@@ -6394,7 +6394,11 @@ body {
   font-family: 'Comfortaa', cursive;
   text-align: center;
   background-image: url(background.jpg);
-  background-position: center; }
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed; }
+  body::-webkit-scrollbar {
+    display: none; }
 
 #contenedor {
   width: 400px;
@@ -6527,7 +6531,7 @@ h1 {
   #menu #controls1 {
     width: 50px;
     height: auto;
-    padding: 20px 5px;
+    padding: 10px 5px;
     background-color: rgba(20, 20, 20, 0.3);
     display: block;
     text-align: center;
