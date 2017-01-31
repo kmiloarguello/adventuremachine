@@ -9697,59 +9697,24 @@ page('/', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-},{"./template":57,"empty-element":3,"page":36,"title":39}],56:[function(require,module,exports){
-var yo = require("yo-yo");
-
-var color = yo`<script>
-                $('#btnHousing1').click(function(){
-                    $('#btnHousing1').toggleClass("box-green");
-                 });
-                 $('#btnHousing2').click(function(){
-                    $('#btnHousing2').toggleClass("box-red");
-                 });
-                 $('#btnHousing3').click(function(){
-                    $('#btnHousing3').toggleClass("box-red");
-                 });
-                 $('#btnHousing4').click(function(){
-                    $('#btnHousing4').toggleClass("box-blue");
-                 });
-                 $('#btnHousing5').click(function(){
-                    $('#btnHousing5').toggleClass("box-green");
-                 });
-                 $('#btnHousing6').click(function(){
-                    $('#btnHousing6').toggleClass("box-red");
-                 });
-                 $('#btnHousing7').click(function(){
-                    $('#btnHousing7').toggleClass("box-blue");
-                 });
-                 $('#btnHousing8').click(function(){
-                    $('#btnHousing8').toggleClass("box-blue");
-                 });
-                 $('#btnHousing9').click(function(){
-                    $('#btnHousing9').toggleClass("box-green");
-                 });
-                </script>`;
-
-module.exports = color;
-
-},{"yo-yo":40}],57:[function(require,module,exports){
+},{"./template":56,"empty-element":3,"page":36,"title":39}],56:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
-var color = require("./scripts.js");
+var color = require("./toggle-color.js");
 var BufferLoader = require("./buffer-loader.js");
 
 var beatBox = yo`<div id="contenedor">
                        <ul>
-                           <li id="btnHousing1"></li>
-                           <li id="btnHousing2"></li>
-                           <li id="btnHousing3"></li>
-                           <li id="btnHousing4"></li>
-                           <li id="btnHousing5"></li>
-                           <li id="btnHousing6"></li>
-                           <li id="btnHousing7"></li>
-                           <li id="btnHousing8"></li>
-                           <li id="btnHousing9"></li>
-                            ${ color }
+                           <li id="btnHousing1" onclick=${ color.green }></li>
+                           <li id="btnHousing2" onclick=${ color.red }></li>
+                           <li id="btnHousing3" onclick=${ color.red2 }></li>
+                           <li id="btnHousing4" onclick=${ color.blue }></li>
+                           <li id="btnHousing5" onclick=${ color.green2 }></li>
+                           <li id="btnHousing6" onclick=${ color.red3 }></li>
+                           <li id="btnHousing7" onclick=${ color.blue2 }></li>
+                           <li id="btnHousing8" onclick=${ color.blue3 }></li>
+                           <li id="btnHousing9" onclick=${ color.green3 }></li>
+                            
                         </ul>
                     </div>`;
 
@@ -9757,28 +9722,6 @@ module.exports = landing(beatBox);
 
 /////////////////////////////
 
-/*var audioCtx = new window.AudioContext();
-var sonido;
-function playSound(buffer,time){
-    var src = audioCtx.createBufferSource();
-    src.buffer = buffer;
-    src.connect(audioCtx.destination);
-    src.start(time);
-}
-
-var request = new XMLHttpRequest();
-request.open("GET","01.mp3",true);
-request.responseType = "arraybuffer";
-
-request.onload = (argument) => {audioCtx.decodeAudioData(request.response, startShow, error)};
-var error = () => { alert("error" + error) };
-var startShow = (buffer) => { sonido = buffer };
-
-function reproducir() {
-    playSound(sonido);
-}
-request.send();
-*/
 window.onload = init;
 var context;
 var audio;
@@ -9812,13 +9755,6 @@ function audioCompletado() {}
 
 // document.addEventListener("keydown", playSonido(BufferLoader.BufferLoader.bufferList));
 
-
-function suma(a, b) {
-    return a + b;
-}
-function resultado() {
-    console.log(suma(30, 4));
-}
 // var Rhythm = {};
 
 // Rhythm.play = () => {
@@ -9842,7 +9778,68 @@ function resultado() {
 //     }
 // };
 
-},{"../landing":59,"./buffer-loader.js":54,"./scripts.js":56,"yo-yo":40}],58:[function(require,module,exports){
+},{"../landing":59,"./buffer-loader.js":54,"./toggle-color.js":57,"yo-yo":40}],57:[function(require,module,exports){
+// Funcion que guarda la clase y el id del color
+function myColor(clase, id) {
+  clase.split(' ').forEach(function (s) {
+    id.classList.toggle(s);
+  });
+}
+// Funciones color verde
+function toggleColorGreen() {
+  var myGreen = document.getElementById("btnHousing1");
+  myColor('box-green', myGreen);
+}
+function toggleColorGreen2() {
+  var myGreen = document.getElementById("btnHousing5");
+  myColor('box-green', myGreen);
+}
+function toggleColorGreen3() {
+  var myGreen = document.getElementById("btnHousing9");
+  myColor('box-green', myGreen);
+}
+
+//Funciones color Rojo
+function toggleColorRed() {
+  var myRed = document.getElementById("btnHousing2");
+  myColor('box-red', myRed);
+}
+function toggleColorRed2() {
+  var myRed = document.getElementById("btnHousing3");
+  myColor('box-red', myRed);
+}
+function toggleColorRed3() {
+  var myRed = document.getElementById("btnHousing6");
+  myColor('box-red', myRed);
+}
+
+//Funciones color Azul
+function toggleColorBlue() {
+  var myBlue = document.getElementById("btnHousing4");
+  myColor('box-blue', myBlue);
+}
+function toggleColorBlue2() {
+  var myBlue = document.getElementById("btnHousing7");
+  myColor('box-blue', myBlue);
+}
+function toggleColorBlue3() {
+  var myBlue = document.getElementById("btnHousing8");
+  myColor('box-blue', myBlue);
+}
+
+module.exports = {
+  green: toggleColorGreen,
+  green2: toggleColorGreen2,
+  green3: toggleColorGreen3,
+  red: toggleColorRed,
+  red2: toggleColorRed2,
+  red3: toggleColorRed3,
+  blue: toggleColorBlue,
+  blue2: toggleColorBlue2,
+  blue3: toggleColorBlue3
+};
+
+},{}],58:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
