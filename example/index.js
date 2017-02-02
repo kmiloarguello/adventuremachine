@@ -34,10 +34,8 @@ function sonido(bufferList) {
     var quarterNoteTime = 60 / tempo;
 
     playSound(beat, startTime);
-    console.log(beat);
 }
-function bufferLoadCompleted(){
-}
+function bufferLoadCompleted(){}
 
 
 
