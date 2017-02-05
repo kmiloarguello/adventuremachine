@@ -6426,44 +6426,365 @@ body {
 .box-blue {
   background-color: #2C64C4 !important; }
 
-ul #btnHousing1,
-ul #btnHousing5,
-ul #btnHousing9 {
-  background-color: rgba(33, 208, 168, 0.37); }
-  ul #btnHousing1:hover,
-  ul #btnHousing5:hover,
-  ul #btnHousing9:hover {
-    background-color: rgba(10, 253, 204, 0.64); }
-  ul #btnHousing1:active,
-  ul #btnHousing5:active,
-  ul #btnHousing9:active {
-    background-color: #0AFDCC; }
+ul #btnHousing1 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing1:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
 
-ul #btnHousing2,
-ul #btnHousing3,
+ul #btnHousing2 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing2:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing3 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing3:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing4 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing4:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing5 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing5:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
 ul #btnHousing6 {
-  background-color: rgba(175, 46, 80, 0.47); }
-  ul #btnHousing2:hover,
-  ul #btnHousing3:hover,
+  background-color: rgba(56, 75, 107, 0.32); }
   ul #btnHousing6:hover {
-    background-color: rgba(212, 33, 79, 0.64); }
-  ul #btnHousing2:active,
-  ul #btnHousing3:active,
-  ul #btnHousing6:active {
-    background-color: #D4214F; }
+    background-color: rgba(44, 100, 196, 0.64); }
 
-ul #btnHousing4,
-ul #btnHousing7,
+ul #btnHousing7 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing7:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
 ul #btnHousing8 {
   background-color: rgba(56, 75, 107, 0.32); }
-  ul #btnHousing4:hover,
-  ul #btnHousing7:hover,
   ul #btnHousing8:hover {
     background-color: rgba(44, 100, 196, 0.64); }
-  ul #btnHousing4:active,
-  ul #btnHousing7:active,
-  ul #btnHousing8:active {
-    background-color: #2C64C4; }
+
+ul #btnHousing9 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing9:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing10 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing10:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing11 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing11:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing12 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing12:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing13 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing13:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing14 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing14:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing15 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing15:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing16 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing16:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing17 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing17:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing18 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing18:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing19 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing19:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing20 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing20:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing21 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing21:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing22 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing22:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing23 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing23:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing24 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing24:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing25 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing25:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing26 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing26:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing27 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing27:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing28 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing28:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing29 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing29:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing30 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing30:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing31 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing31:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing32 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing32:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing33 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing33:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing34 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing34:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing35 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing35:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing36 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing36:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing37 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing37:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing38 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing38:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing39 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing39:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing40 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing40:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing41 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing41:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing42 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing42:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing43 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing43:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing44 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing44:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing45 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing45:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing46 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing46:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing47 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing47:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing48 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing48:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing49 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing49:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing50 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing50:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing51 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing51:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing52 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing52:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing53 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing53:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing54 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing54:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing55 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing55:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing56 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing56:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing57 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing57:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing58 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing58:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing59 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing59:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing60 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing60:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing61 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing61:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing62 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing62:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing63 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing63:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing64 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing64:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing65 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing65:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing66 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing66:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing67 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing67:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing68 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing68:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing69 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing69:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing70 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing70:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing71 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing71:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
+
+ul #btnHousing72 {
+  background-color: rgba(56, 75, 107, 0.32); }
+  ul #btnHousing72:hover {
+    background-color: rgba(44, 100, 196, 0.64); }
 
 li.toggled:hover {
   background-color: rgba(212, 33, 79, 0.8); }

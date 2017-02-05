@@ -3,17 +3,8 @@ var landing = require("../landing");
 var color = require("./scripts.js");
 var menu = require("../menu/menu-home.js");
 
-var beatBox = lista([
-  'btnHousing1',
-  'btnHousing2',
-  'btnHousing3',
-  'btnHousing4',
-  'btnHousing5',
-  'btnHousing6',
-  'btnHousing7',
-  'btnHousing8',
-  'btnHousing9'
-  ]);
+//Array para el numero de botones a renderizar
+var beatBox = lista(Array(72).fill(0).map((e,i)=> 'btnHousing'+(i+1)));
   
 function lista(items){
   return yo`<div id="contenedor">

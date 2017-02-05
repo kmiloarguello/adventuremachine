@@ -70,42 +70,54 @@ body{
 .box-blue{
   background-color: $azul_activo !important;
 }
+
 ul{
-    #btnHousing1,
-    #btnHousing5,
-    #btnHousing9
-    {
-      background-color: $verde;
-      &:hover{
-        background-color: $verde_hover;
-      }
-      &:active{
-        background-color: $verde_activo;
-      }
+  @for $ii from 1 through 72{
+  #btnHousing#{$ii} {
+    background-color: $azul;
+    &:hover{
+      background-color: $azul_hover;
     }
-    #btnHousing2,
-    #btnHousing3,
-    #btnHousing6{
-        background-color: $rojo;
-        &:hover{
-          background-color: $rojo_hover;
-        }
-        &:active{
-          background-color: $rojo_activo;
-        }
-    }
-    #btnHousing4,
-    #btnHousing7,
-    #btnHousing8 {
-        background-color: $azul;
-        &:hover{
-          background-color: $azul_hover;
-        }
-        &:active{
-          background-color: $azul_activo;
-        }
-    }
+  }
 }
+}
+
+// ul{
+//     #btnHousing1,
+//     #btnHousing5,
+//     #btnHousing9
+//     {
+//       background-color: $verde;
+//       &:hover{
+//         background-color: $verde_hover;
+//       }
+//       &:active{
+//         background-color: $verde_activo;
+//       }
+//     }
+//     #btnHousing2,
+//     #btnHousing3,
+//     #btnHousing6{
+//         background-color: $rojo;
+//         &:hover{
+//           background-color: $rojo_hover;
+//         }
+//         &:active{
+//           background-color: $rojo_activo;
+//         }
+//     }
+//     #btnHousing4,
+//     #btnHousing7,
+//     #btnHousing8 {
+//         background-color: $azul;
+//         &:hover{
+//           background-color: $azul_hover;
+//         }
+//         &:active{
+//           background-color: $azul_activo;
+//         }
+//     }
+// }
 li.toggled:hover{
     background-color: rgba(212,33,79,0.8);
 }
