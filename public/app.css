@@ -6744,11 +6744,8 @@ h1 {
     color: #141414 !important; }
   #menu #about {
     width: 100px;
-    height: auto;
     padding: 20px 5px;
     background-color: rgba(20, 20, 20, 0.3);
-    display: block;
-    text-align: center;
     display: inline-block;
     color: #ecf0f1;
     cursor: pointer; }

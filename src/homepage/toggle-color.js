@@ -51,9 +51,9 @@ function toggleColorGreen() {
 
 //Funciones color Rojo
 function toggleColorRed() {
-  var myRed = document.getElementById("btnHousing2");
-  myColor('box-red',myRed);
-  console.log(getRandom(72,1));
+  var myRed = document.getElementById(event.srcElement.id);
+  myColor('box-red', myRed);
+  // getRandom(72,1);
 }
 
 

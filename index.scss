@@ -123,19 +123,16 @@ h1{
   }  
   
   #about{
-      width: 100px;
-      height: auto;
-      padding: 20px 5px;
-      background-color: $boton-negro;
-      display: block;
-      text-align: center;
-      display: inline-block;
-      color: $secondary-color;
-      cursor: pointer;
-      &:hover{
-        background-color: $boton-amarillo;
-        color: $letra-hover-negro          
-      }
+    width: 100px;
+    padding: 20px 5px;
+    background-color: $boton-negro;
+    display: inline-block;
+    color: $secondary-color;
+    cursor: pointer;
+    &:hover{
+      background-color: $boton-amarillo;
+      color: $letra-hover-negro          
+    }
   }
   #controls{
     position: relative;
