@@ -3,20 +3,26 @@ var landing = require("../landing");
 var color = require("./scripts.js");
 var menu = require("../menu/menu-home.js");
 
-var beatBox = yo`<div id="contenedor">
-                       <ul>
-                           <li id="btnHousing1" onclick="sonido(bufferLoader.bufferList);"></li>
-                           <li id="btnHousing2"></li>
-                           <li id="btnHousing3"></li>
-                           <li id="btnHousing4"></li>
-                           <li id="btnHousing5"></li>
-                           <li id="btnHousing6"></li>
-                           <li id="btnHousing7"></li>
-                           <li id="btnHousing8"></li>
-                           <li id="btnHousing9"></li>
-                            ${color}
-                        </ul>
-                        ${menu}
-                    </div>`;
-                    
+var beatBox = lista([
+  'btnHousing1',
+  'btnHousing2',
+  'btnHousing3',
+  'btnHousing4',
+  'btnHousing5',
+  'btnHousing6',
+  'btnHousing7',
+  'btnHousing8',
+  'btnHousing9'
+  ]);
+  
+function lista(items){
+  return yo`<div id="contenedor">
+              <ul>
+                ${items.map((item) => { return yo`<li id=${item}></li>` })}
+              </<ul>
+              ${color}
+              ${menu}
+            </div>`;
+}
+
 module.exports = landing(beatBox);

@@ -35,28 +35,26 @@ body{
   background-attachment: fixed;
   &::-webkit-scrollbar { 
     display: none; 
-  }  
-  
+  }
 }
 
 #contenedor{
-  width: 400px;
+  width: 600px;
   margin-top: 10%;
   text-align: center;
   display: inline-block;
   
   ul{
-    width: 90%;
+    width: 100%;
     list-style-type: none;
-    @include transform(45deg);
+    // @include transform(45deg);
     text-align: center;
     display: inline-block;
     
     li{
-      width: 100px;
-      height: 100px;
+      width: 50px;
+      height: 50px;
       float: left;
-      margin: 5px;
       cursor: pointer;
       border: 1px solid rgba(0,0,0,0.17);      
     }
@@ -72,7 +70,6 @@ body{
 .box-blue{
   background-color: $azul_activo !important;
 }
-
 ul{
     #btnHousing1,
     #btnHousing5,
@@ -115,7 +112,6 @@ li.toggled:hover{
 h1{
     color:$secondary-color;  
 }
-
 .collection{
   background: rgba(0,0,0,0.3);
   .collection-item{
@@ -134,7 +130,6 @@ h1{
     }
   }  
 }
-
 #technologies{
   margin: 0 20px 0 20px;
   ul{
@@ -210,7 +205,6 @@ h1{
   
 }
 
-
 footer{
   position: absolute;
   left: 0;
@@ -254,66 +248,39 @@ footer{
 
 
 
-
-/* Smartphones (portrait and landscape) ----------- */
-@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
-    #contenedor{
-      width: 200px;
-      margin-top: 15%;
-      li{
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-      }
+@media only screen and (max-width : 680px) {
+  #contenedor{
+    width: 100%;
+    margin-top: 20%;
+    li{
+      width: 50px !important;
+      height: 50px !important;
     }
-    h1{
-        font-size: 30px;
-    }
-    footer{
-        #about{
-            width: 100px;
-            height: auto;
-            padding: 20px 2px;
-        }
-        #controls,#controls1{
-            width: 30px;
-            height: auto;
-            padding: 20px 5px;
-        }
-        .row{
-            margin-top: 50px;
-        }
-    }
-
+  }
+  h1{
+      font-size: 30px;
+  }
+  // footer{
+  //     #about{
+  //         width: 100px;
+  //         height: auto;
+  //         padding: 20px 2px;
+  //     }
+  //     #controls,#controls1{
+  //         width: 30px;
+  //         height: auto;
+  //         padding: 20px 5px;
+  //     }
+  //     .row{
+  //         margin-top: 50px;
+  //     }
+  // }    
 }
-
-/* Smartphones (portrait) ----------- */
-@media only screen and (max-width : 320px) {
-    #contenedor{
-      width: 200px;
-      margin-top: 20%;
-      li{
-        width: 50px;
-        height: 50px;
-        margin: 5px;
-      }
+@media only screen and (max-width : 400px){
+  #contenedor{
+    li{
+      width: 25px !important;
+      height: 25px !important;
     }
-    h1{
-        font-size: 30px;
-    }
-    footer{
-        #about{
-            width: 100px;
-            height: auto;
-            padding: 20px 2px;
-        }
-        #controls,#controls1{
-            width: 30px;
-            height: auto;
-            padding: 20px 5px;
-        }
-        .row{
-            margin-top: 50px;
-        }
-    }    
+  }  
 }
