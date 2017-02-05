@@ -20076,7 +20076,7 @@ module.exports = yo`<div id="menu">
 
               <a href="/about-me"><div id="about"><small>${ translate.message('about') }</small></div></a>
               
-              <div id="controls" onclick=${ liked } class="btn tooltipped waves-effect waves-light" data-position="bottom" data-delay="50" data-tooltip=${ translate.message('menu-like') }>
+              <div id="controls" onclick=${ liked } class="btn tooltipped" data-position="bottom" data-delay="50" data-tooltip=${ translate.message('menu-like') }>
                 <small id="no-like" class="no-like"><i class="fa fa-heart" aria-hidden="true"></i></small>
                 <small id="like"><i class="fa fa-heart-o" aria-hidden="true"></i></small>
               </div>              
