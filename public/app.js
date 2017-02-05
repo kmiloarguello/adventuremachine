@@ -19747,7 +19747,6 @@ page('/about-me', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-<<<<<<< HEAD
 },{"./template":52,"empty-element":3,"page":37,"title":40}],51:[function(require,module,exports){
 var translate = require("../translate");
 var yo = require("yo-yo");
@@ -19842,10 +19841,7 @@ module.exports = {
   card3: card3
 };
 
-},{"../translate":67,"yo-yo":41}],52:[function(require,module,exports){
-=======
-},{"../translate":63,"./template":50,"empty-element":3,"page":36,"title":39}],50:[function(require,module,exports){
->>>>>>> play-pause
+},{"../translate":68,"yo-yo":41}],52:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
 var translate = require("../translate");
@@ -19887,11 +19883,7 @@ var aboutme = yo`<div>
                 </div>`;
 module.exports = landing(aboutme);
 
-<<<<<<< HEAD
-},{"../landing":60,"../menu/menu-about.js":61,"../translate":67,"./proyectos.js":51,"yo-yo":41}],53:[function(require,module,exports){
-=======
-},{"../landing":59,"../translate":63,"yo-yo":40}],51:[function(require,module,exports){
->>>>>>> play-pause
+},{"../landing":61,"../menu/menu-about.js":62,"../translate":68,"./proyectos.js":51,"yo-yo":41}],53:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -19918,11 +19910,7 @@ var adventure = yo`<div>
 
 module.exports = landing(adventure);
 
-<<<<<<< HEAD
-},{"../landing":60,"../menu/menu-it.js":63,"../translate":67,"yo-yo":41}],55:[function(require,module,exports){
-=======
-},{"../landing":59,"../translate":63,"yo-yo":40}],53:[function(require,module,exports){
->>>>>>> play-pause
+},{"../landing":61,"../menu/menu-it.js":64,"../translate":68,"yo-yo":41}],55:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -19956,10 +19944,7 @@ function lang(local) {
 
 document.body.appendChild(el);
 
-<<<<<<< HEAD
-},{"../translate":67,"yo-yo":41}],56:[function(require,module,exports){
-=======
-},{"../translate":63,"yo-yo":40}],54:[function(require,module,exports){
+},{"../translate":68,"yo-yo":41}],56:[function(require,module,exports){
 function BufferLoader(context, urlList, callback) {
     this.context = context;
     this.urlList = urlList;
@@ -19999,8 +19984,7 @@ module.exports = {
     BufferLoader: BufferLoader
 };
 
-},{}],55:[function(require,module,exports){
->>>>>>> play-pause
+},{}],57:[function(require,module,exports){
 var page = require("page");
 var empty = require("empty-element");
 var template = require("./template");
@@ -20013,46 +19997,10 @@ page('/', function (ctx, next) {
     empty(main).appendChild(template);
 });
 
-<<<<<<< HEAD
-},{"./template":58,"empty-element":3,"page":37,"title":40}],57:[function(require,module,exports){
-var yo = require("yo-yo");
-
-var color = yo`<script>
-                $('#btnHousing1').click(function(){
-                    $('#btnHousing1').toggleClass("box-green");
-                 });
-                 $('#btnHousing2').click(function(){
-                    $('#btnHousing2').toggleClass("box-red");
-                 });
-                 $('#btnHousing3').click(function(){
-                    $('#btnHousing3').toggleClass("box-red");
-                 });
-                 $('#btnHousing4').click(function(){
-                    $('#btnHousing4').toggleClass("box-blue");
-                 });
-                 $('#btnHousing5').click(function(){
-                    $('#btnHousing5').toggleClass("box-green");
-                 });
-                 $('#btnHousing6').click(function(){
-                    $('#btnHousing6').toggleClass("box-red");
-                 });
-                 $('#btnHousing7').click(function(){
-                    $('#btnHousing7').toggleClass("box-blue");
-                 });
-                 $('#btnHousing8').click(function(){
-                    $('#btnHousing8').toggleClass("box-blue");
-                 });
-                 $('#btnHousing9').click(function(){
-                    $('#btnHousing9').toggleClass("box-green");
-                 });
-                </script>`;
-
-module.exports = color;
-
-},{"yo-yo":41}],58:[function(require,module,exports){
+},{"./template":58,"empty-element":3,"page":37,"title":40}],58:[function(require,module,exports){
 var yo = require("yo-yo");
 var landing = require("../landing");
-var color = require("./scripts.js");
+var color = require("./toggle-color.js");
 var menu = require("../menu/menu-home.js");
 
 //Array para el numero de botones a renderizar
@@ -20062,70 +20010,16 @@ function lista(items) {
   return yo`<div id="contenedor">
               <ul>
                 ${ items.map(item => {
-    return yo`<li id=${ item }></li>`;
+    return yo`<li id=${ item } onclick=${ color.red }></li>`;
   }) }
               </<ul>
-              ${ color }
               ${ menu }
             </div>`;
 }
 
 module.exports = landing(beatBox);
 
-},{"../landing":60,"../menu/menu-home.js":62,"./scripts.js":57,"yo-yo":41}],59:[function(require,module,exports){
-=======
-},{"./template":56,"empty-element":3,"page":36,"title":39}],56:[function(require,module,exports){
-var yo = require("yo-yo");
-var landing = require("../landing");
-var color = require("./toggle-color.js");
-var BufferLoader = require("./buffer-loader.js");
-
-var beatBox = yo`<div id="contenedor">
-                       <ul>
-                           <li id="btnHousing1" onclick=${ color.green }  ></li>
-                           <li id="btnHousing2" onclick=${ color.red }    ></li>
-                           <li id="btnHousing3" onclick=${ color.red2 }   ></li>
-                           <li id="btnHousing4" onclick=${ color.blue }   ></li>
-                           <li id="btnHousing5" onclick=${ color.green2 } ></li>
-                           <li id="btnHousing6" onclick=${ color.red3 }   ></li>
-                           <li id="btnHousing7" onclick=${ color.blue2 }  ></li>
-                           <li id="btnHousing8" onclick=${ color.blue3 }  ></li>
-                           <li id="btnHousing9" onclick=${ color.green3 } ></li>
-                            
-                        </ul>
-                    </div>`;
-
-module.exports = landing(beatBox);
-
-/////////////////////////////
-
-
-// document.addEventListener("keydown", playSonido(BufferLoader.BufferLoader.bufferList));
-
-// var Rhythm = {};
-
-// Rhythm.play = () => {
-//     function playSound(buffer, time){
-//         var source = context.createBufferSource();
-//         source.buffer = buffer;
-//         source.connect(context.destination);
-//         source.start(time);
-//     }
-
-//     function sonido(bufferList){
-//         var beat = bufferList[1];
-//         var startTime = context.currentTime + 0.100;
-//         var tempo = 80;
-//         var eigthNoteTime = (60 / tempo) / 2;
-
-//         for (var i=0; i<2; i++){
-//             var time = startTime + i * 8 * eigthNoteTime;
-//             playSound(beat, time);
-//         }        
-//     }
-// };
-
-},{"../landing":59,"./buffer-loader.js":54,"./toggle-color.js":57,"yo-yo":40}],57:[function(require,module,exports){
+},{"../landing":61,"../menu/menu-home.js":63,"./toggle-color.js":59,"yo-yo":41}],59:[function(require,module,exports){
 var BufferLoader = require("./buffer-loader.js");
 
 // Funcion que guarda la clase y el id del color
@@ -20168,27 +20062,12 @@ function toggleColorGreen() {
   console.log(BufferLoader);
   // playSonido(BufferLoader.bufferList);
 }
-function toggleColorGreen2() {
-  var myGreen = document.getElementById("btnHousing5");
-  myColor('box-green', myGreen);
-}
-function toggleColorGreen3() {
-  var myGreen = document.getElementById("btnHousing9");
-  myColor('box-green', myGreen);
-}
 
 //Funciones color Rojo
 function toggleColorRed() {
   var myRed = document.getElementById("btnHousing2");
   myColor('box-red', myRed);
-}
-function toggleColorRed2() {
-  var myRed = document.getElementById("btnHousing3");
-  myColor('box-red', myRed);
-}
-function toggleColorRed3() {
-  var myRed = document.getElementById("btnHousing6");
-  myColor('box-red', myRed);
+  console.log(getRandom(72, 1));
 }
 
 //Funciones color Azul
@@ -20196,29 +20075,21 @@ function toggleColorBlue() {
   var myBlue = document.getElementById("btnHousing4");
   myColor('box-blue', myBlue);
 }
-function toggleColorBlue2() {
-  var myBlue = document.getElementById("btnHousing7");
-  myColor('box-blue', myBlue);
-}
-function toggleColorBlue3() {
-  var myBlue = document.getElementById("btnHousing8");
-  myColor('box-blue', myBlue);
+
+function getRandom(min, max) {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min)) + min;
 }
 
 module.exports = {
   green: toggleColorGreen,
-  green2: toggleColorGreen2,
-  green3: toggleColorGreen3,
   red: toggleColorRed,
-  red2: toggleColorRed2,
-  red3: toggleColorRed3,
-  blue: toggleColorBlue,
-  blue2: toggleColorBlue2,
-  blue3: toggleColorBlue3
+  blue: toggleColorBlue
+
 };
 
-},{"./buffer-loader.js":54}],58:[function(require,module,exports){
->>>>>>> play-pause
+},{"./buffer-loader.js":56}],60:[function(require,module,exports){
 var page = require("page");
 
 require('./homepage');
@@ -20228,11 +20099,7 @@ require('./footer');
 
 page();
 
-<<<<<<< HEAD
-},{"./about-me":50,"./adventure":53,"./footer":55,"./homepage":56,"page":37}],60:[function(require,module,exports){
-=======
-},{"./about-me":49,"./adventure":51,"./footer":53,"./homepage":55,"page":36}],59:[function(require,module,exports){
->>>>>>> play-pause
+},{"./about-me":50,"./adventure":53,"./footer":55,"./homepage":57,"page":37}],61:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 var $ = require("jquery");
@@ -20250,7 +20117,6 @@ module.exports = function landing(box) {
                 </div>`;
 };
 
-<<<<<<< HEAD
 $(document).ready(function () {
 
     $(window).scroll(function () {
@@ -20263,7 +20129,7 @@ $(document).ready(function () {
     });
 });
 
-},{"../translate":67,"jquery":36,"yo-yo":41}],61:[function(require,module,exports){
+},{"../translate":68,"jquery":36,"yo-yo":41}],62:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -20275,7 +20141,7 @@ module.exports = yo`<div id="menu">
                       
                   </div>`;
 
-},{"../translate":67,"yo-yo":41}],62:[function(require,module,exports){
+},{"../translate":68,"yo-yo":41}],63:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -20319,7 +20185,7 @@ function slider() {
   document.getElementById('volume1').classList.toggle('hide');
 }
 
-},{"../translate":67,"yo-yo":41}],63:[function(require,module,exports){
+},{"../translate":68,"yo-yo":41}],64:[function(require,module,exports){
 var yo = require("yo-yo");
 var translate = require("../translate");
 
@@ -20331,10 +20197,7 @@ module.exports = yo`<div id="menu">
     
                   </div>`;
 
-},{"../translate":67,"yo-yo":41}],64:[function(require,module,exports){
-=======
-},{"../translate":63,"yo-yo":40}],60:[function(require,module,exports){
->>>>>>> play-pause
+},{"../translate":68,"yo-yo":41}],65:[function(require,module,exports){
 module.exports = {
     'english': 'English',
     'french': 'Français',
@@ -20355,11 +20218,7 @@ module.exports = {
     'menu-like': 'Love this?'
 };
 
-<<<<<<< HEAD
-},{}],65:[function(require,module,exports){
-=======
-},{}],61:[function(require,module,exports){
->>>>>>> play-pause
+},{}],66:[function(require,module,exports){
 module.exports = {
     'english': 'Inglés',
     'french': 'Français',
@@ -20380,8 +20239,7 @@ module.exports = {
     'menu-like': 'Amas esto?'
 };
 
-<<<<<<< HEAD
-},{}],66:[function(require,module,exports){
+},{}],67:[function(require,module,exports){
 module.exports = {
     'english': 'Ingles',
     'french': 'Français',
@@ -20402,27 +20260,7 @@ module.exports = {
     'menu-like': 'Aime ça?'
 };
 
-},{}],67:[function(require,module,exports){
-=======
-},{}],62:[function(require,module,exports){
-module.exports = {
-  'english': 'Ingles',
-  'french': 'Français',
-  'spanish': 'Español',
-  'titulo': 'La Machine d\'aventure',
-  'tit_about': 'About Camilo',
-  'about': 'À PROPOS DE MOI',
-  'upload': 'UPLOAD',
-  'whats': 'C\'EST À QUEL PROPOS?',
-  'texto_ad': 'qu\'est-ce que c\'est ?',
-  'texto_ad_t': 'Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français.',
-  'texto_ab': 'Camilo Arguello',
-  'texto_ab_jb': 'développeur web',
-  'texto_ab_t': 'Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français Ce texte est en français.'
-};
-
-},{}],63:[function(require,module,exports){
->>>>>>> play-pause
+},{}],68:[function(require,module,exports){
 if (!window.Intl) {
     window.Intl = require('intl');
     require("intl/locale-data/jsonp/en-US.js");
@@ -20460,8 +20298,4 @@ module.exports = {
     date: new IntlRelativeFormat(local)
 };
 
-<<<<<<< HEAD
-},{"./en-US":64,"./es":65,"./fr":66,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[59]);
-=======
-},{"./en-US":60,"./es":61,"./fr":62,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[58]);
->>>>>>> play-pause
+},{"./en-US":65,"./es":66,"./fr":67,"intl":31,"intl-messageformat":4,"intl-relativeformat":16,"intl-relativeformat/dist/locale-data/en.js":13,"intl-relativeformat/dist/locale-data/es.js":14,"intl-relativeformat/dist/locale-data/fr.js":15,"intl/locale-data/jsonp/en-US.js":33,"intl/locale-data/jsonp/es-CO.js":34,"intl/locale-data/jsonp/fr.js":35}]},{},[60]);

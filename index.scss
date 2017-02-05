@@ -38,18 +38,24 @@ body{
   }
 }
 
+h1{
+    color:$secondary-color;  
+}
+
 #contenedor{
   width: 600px;
-  margin-top: 10%;
-  text-align: center;
   display: inline-block;
   
   ul{
-    width: 100%;
     list-style-type: none;
-    // @include transform(45deg);
-    text-align: center;
-    display: inline-block;
+    @for $ii from 1 through 72{
+      #btnHousing#{$ii} {
+        background-color: $azul;
+        &:hover{
+          background-color: $azul_hover;
+        }
+      }
+    }    
     
     li{
       width: 50px;
@@ -71,16 +77,6 @@ body{
   background-color: $azul_activo !important;
 }
 
-ul{
-  @for $ii from 1 through 72{
-  #btnHousing#{$ii} {
-    background-color: $azul;
-    &:hover{
-      background-color: $azul_hover;
-    }
-  }
-}
-}
 
 // ul{
 //     #btnHousing1,
@@ -118,12 +114,10 @@ ul{
 //         }
 //     }
 // }
-li.toggled:hover{
-    background-color: rgba(212,33,79,0.8);
-}
-h1{
-    color:$secondary-color;  
-}
+// li.toggled:hover{
+//     background-color: rgba(212,33,79,0.8);
+// }
+
 .collection{
   background: rgba(0,0,0,0.3);
   .collection-item{
