@@ -1,5 +1,6 @@
 var yo = require("yo-yo");
 var landing = require("../landing");
+var color = require("./toggle-color.js");
 var color = require("./scripts.js");
 var menu = require("../menu/menu-home.js");
 
@@ -11,7 +12,6 @@ function lista(items){
               <ul>
                 ${items.map((item) => { return yo`<li id=${item}></li>` })}
               </<ul>
-              ${color}
               ${menu}
             </div>`;
 }
