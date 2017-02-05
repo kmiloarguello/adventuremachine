@@ -42,25 +42,24 @@ function playSonido(bufferList){
 
 // Funciones color verde
 function toggleColorGreen() {
-  var myGreen = document.getElementById("btnHousing1");
+  var myGreen = document.getElementById(event.srcElement.id);
   myColor('box-green',myGreen);
-  console.log(BufferLoader);
-  // playSonido(BufferLoader.bufferList);
 }
-
 
 //Funciones color Rojo
 function toggleColorRed() {
   var myRed = document.getElementById(event.srcElement.id);
   myColor('box-red', myRed);
-  // getRandom(72,1);
 }
-
 
 //Funciones color Azul
 function toggleColorBlue() {
-  var myBlue = document.getElementById("btnHousing4");
+  var myBlue = document.getElementById(event.srcElement.id);
   myColor('box-blue',myBlue);
+}
+
+function randomColor(){
+  getRandom(72,1);
 }
 
 
