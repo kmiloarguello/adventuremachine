@@ -26,6 +26,13 @@ $azul_activo: #2C64C4;
   transform: rotate($rotacion);  
 }
 
+.transicion{
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s;  
+}
+
 body{
   font-family: 'Comfortaa', cursive;
   text-align: center;
@@ -43,9 +50,7 @@ h1{
 }
 
 #contenedor{
-  width: 600px;
   display: inline-block;
-  
   ul{
     list-style-type: none;
     @for $ii from 1 through 72{
@@ -55,14 +60,14 @@ h1{
           background-color: $azul_hover;
         }
       }
-    }    
+    } 
+    @extend .transicion;
     
     li{
-      width: 50px;
-      height: 50px;
-      float: left;
+      height: 70px;
       cursor: pointer;
-      border: 1px solid rgba(0,0,0,0.17);      
+      border: 1px solid rgba(0,0,0,0.17);
+      @extend .transicion;
     }
   }
 }
@@ -76,47 +81,6 @@ h1{
 .box-blue{
   background-color: $azul_activo !important;
 }
-
-
-// ul{
-//     #btnHousing1,
-//     #btnHousing5,
-//     #btnHousing9
-//     {
-//       background-color: $verde;
-//       &:hover{
-//         background-color: $verde_hover;
-//       }
-//       &:active{
-//         background-color: $verde_activo;
-//       }
-//     }
-//     #btnHousing2,
-//     #btnHousing3,
-//     #btnHousing6{
-//         background-color: $rojo;
-//         &:hover{
-//           background-color: $rojo_hover;
-//         }
-//         &:active{
-//           background-color: $rojo_activo;
-//         }
-//     }
-//     #btnHousing4,
-//     #btnHousing7,
-//     #btnHousing8 {
-//         background-color: $azul;
-//         &:hover{
-//           background-color: $azul_hover;
-//         }
-//         &:active{
-//           background-color: $azul_activo;
-//         }
-//     }
-// }
-// li.toggled:hover{
-//     background-color: rgba(212,33,79,0.8);
-// }
 
 .collection{
   background: rgba(0,0,0,0.3);
@@ -210,7 +174,6 @@ h1{
   }
   
 }
-
 footer{
   position: absolute;
   left: 0;
@@ -252,41 +215,63 @@ footer{
 }
 
 
-
-
-@media only screen and (max-width : 680px) {
+@media only screen and (max-width : 600px) and (min-width : 850px) {
   #contenedor{
-    width: 100%;
+    li{
+      height: 40px !important;
+    }
+  }
+}
+
+@media only screen and (max-width : 600px) {
+  #contenedor{
     margin-top: 20%;
     li{
-      width: 50px !important;
-      height: 50px !important;
-    }
+      height: 30px !important;
+    }    
   }
   h1{
-      font-size: 30px;
+    font-size: 30px;
   }
-  // footer{
-  //     #about{
-  //         width: 100px;
-  //         height: auto;
-  //         padding: 20px 2px;
-  //     }
-  //     #controls,#controls1{
-  //         width: 30px;
-  //         height: auto;
-  //         padding: 20px 5px;
-  //     }
-  //     .row{
-  //         margin-top: 50px;
-  //     }
-  // }    
 }
-@media only screen and (max-width : 400px){
-  #contenedor{
-    li{
-      width: 25px !important;
-      height: 25px !important;
-    }
-  }  
-}
+
+
+// ul{
+//     #btnHousing1,
+//     #btnHousing5,
+//     #btnHousing9
+//     {
+//       background-color: $verde;
+//       &:hover{
+//         background-color: $verde_hover;
+//       }
+//       &:active{
+//         background-color: $verde_activo;
+//       }
+//     }
+//     #btnHousing2,
+//     #btnHousing3,
+//     #btnHousing6{
+//         background-color: $rojo;
+//         &:hover{
+//           background-color: $rojo_hover;
+//         }
+//         &:active{
+//           background-color: $rojo_activo;
+//         }
+//     }
+//     #btnHousing4,
+//     #btnHousing7,
+//     #btnHousing8 {
+//         background-color: $azul;
+//         &:hover{
+//           background-color: $azul_hover;
+//         }
+//         &:active{
+//           background-color: $azul_activo;
+//         }
+//     }
+// }
+// li.toggled:hover{
+//     background-color: rgba(212,33,79,0.8);
+// }

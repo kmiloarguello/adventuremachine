@@ -7,10 +7,12 @@ var menu = require("../menu/menu-home.js");
 var beatBox = lista(Array(72).fill(0).map((e,i) => 'btnHousing'+(i+1)));
   
 function lista(items){
-  return yo`<div id="contenedor">
+  return yo`<div id="contenedor" class="container">
+            <div class="row">
               <ul>
-                ${items.map((item) => { return yo`<li id=${item} onclick=${color.red}></li>` })}
+                ${items.map((item) => { return yo`<li id=${item} class="col s1" onclick=${color.red}></li>` })}
               </<ul>
+            </div>
               ${menu}
             </div>`;
 }

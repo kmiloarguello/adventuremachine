@@ -6390,6 +6390,12 @@ button.picker__today:focus, button.picker__clear:focus, button.picker__close:foc
   .picker--time .picker__box {
     margin-bottom: 5em; } }
 
+.transicion, #contenedor ul, #contenedor ul li {
+  -webkit-transition: all ease 0.3s;
+  -moz-transition: all ease 0.3s;
+  -o-transition: all ease 0.3s;
+  transition: all ease 0.3s; }
+
 body {
   font-family: 'Comfortaa', cursive;
   text-align: center;
@@ -6404,7 +6410,6 @@ h1 {
   color: #ecf0f1; }
 
 #contenedor {
-  width: 600px;
   display: inline-block; }
   #contenedor ul {
     list-style-type: none; }
@@ -6697,9 +6702,7 @@ h1 {
       #contenedor ul #btnHousing72:hover {
         background-color: rgba(44, 100, 196, 0.64); }
     #contenedor ul li {
-      width: 50px;
-      height: 50px;
-      float: left;
+      height: 70px;
       cursor: pointer;
       border: 1px solid rgba(0, 0, 0, 0.17); }
 
@@ -6809,17 +6812,14 @@ footer {
   footer .camilo small {
     color: #ecf0f1; }
 
-@media only screen and (max-width: 680px) {
+@media only screen and (max-width: 600px) and (min-width: 850px) {
+  #contenedor li {
+    height: 40px !important; } }
+
+@media only screen and (max-width: 600px) {
   #contenedor {
-    width: 100%;
     margin-top: 20%; }
     #contenedor li {
-      width: 50px !important;
-      height: 50px !important; }
+      height: 30px !important; }
   h1 {
     font-size: 30px; } }
-
-@media only screen and (max-width: 400px) {
-  #contenedor li {
-    width: 25px !important;
-    height: 25px !important; } }
