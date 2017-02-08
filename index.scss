@@ -59,9 +59,11 @@ h1{
         &:hover{
           background-color: $azul_hover;
         }
-        @for $iii from 5 through 8 {
-          #btnHousing#{$iii}{
-            background-color: $verde;  
+        $contador: 12;
+        @if (($ii >= 5) and ($ii <= 8)){
+          background-color: $verde;
+          &:hover{
+            background-color: $verde-hover;
           }
         }         
       }

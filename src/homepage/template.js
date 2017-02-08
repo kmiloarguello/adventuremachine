@@ -10,7 +10,7 @@ function lista(items){
   return yo`<div id="contenedor" class="container">
             <div class="row">
               <ul>
-                ${items.map((item) => { return yo`<li id=${item} class="col s1" onclick=${color.red}></li>` })}
+                ${items.map((item) => { return yo`<li id=${item} class="col s1" onclick="playSonido(bufferLoader.bufferList);"></li>` })}
               </<ul>
             </div>
               ${menu}

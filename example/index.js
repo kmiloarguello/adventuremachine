@@ -13,7 +13,7 @@ function init() {
     }
     bufferLoader = new BufferLoader(context,
     [
-        'worlds_mezcla.mp3'
+        '01.mp3'
     ],
     bufferLoadCompleted);
     bufferLoader.load();
@@ -37,5 +37,8 @@ function sonido(bufferList) {
 }
 function bufferLoadCompleted(){}
 
+console.log(document.getElementById('btnHousing1'));
+
+//document.getElementById('btnHousing1').addEventListener("click", sonido(bufferLoader.bufferList));
 
 
